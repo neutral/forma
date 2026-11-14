@@ -1,0 +1,440 @@
+{
+  "name": "stock-to-cash/spans/orders-and-accounts/claims/exposure-conservation/witness-cancel-only-uncollected-credit.ddfdfd789339",
+  "kind": "witness",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "path": "models/stock-to-cash/spans/orders-and-accounts/claims/exposure-conservation/witness-cancel-only-uncollected-credit.md",
+        "sha256": "03dc2385c98ab787b5c77dc5cc2d765fbc58d8e698f15883965e371c2d5d63d8"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "c05c265b3a8c2e52d455eaa4ec870d834f52fc2ffc886c55ffef81a404f61e28"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "eab4bd570c4c2f514e2343d9044afc5c739370458c3454aeb7c9a5247db49581"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "accounts/actions/apply-receipt",
+        "pin": "ff1726325ace1bd5c7e657ab858de95006cddf18c646a8e588a157506812b364"
+      },
+      {
+        "entry": "accounts/actions/issue-invoice",
+        "pin": "25d79331102414bdb9a35dc67d4672cf2ba7c25e71de0f34fe37e1bfb80f5b16"
+      },
+      {
+        "entry": "orders-and-accounts/claims/exposure-conservation",
+        "pin": "23f92fd6ca122e8519f6e6b72a6875eb24d22799d64fc6deaa557ae86a953808"
+      },
+      {
+        "entry": "orders/actions/cancel-remainder",
+        "pin": "e2170a51704bcc792d9d13fe21251de529eecfff29dea70054147daf71fae3a9"
+      },
+      {
+        "entry": "orders/actions/collect-shipment",
+        "pin": "ffd0a8da6efbfeb315eab5cc6b43350b8fc1fc9ae1a2b00b4045c6ae96e6dfb4"
+      },
+      {
+        "entry": "orders/actions/confirm-order",
+        "pin": "c38b3ad9186861f3e09ce1acfe918680eb6b439eef7a2fe1f041b91a7aeff621"
+      },
+      {
+        "entry": "orders/actions/prepare-shipment",
+        "pin": "d59462d4deac8b42caeefc40a8afcc1c8febd07daacf3f0426510a309b190089"
+      },
+      {
+        "entry": "orders/actions/record-order",
+        "pin": "8065850002ac92f3bcf3ff4b1265726373a64e69a464ae91673fd5fa77a47561"
+      },
+      {
+        "entry": "stock/actions/receive-batch",
+        "pin": "75373cedf831cf406be1e23850082a1d63b50f6fefb39f67c052efa196c8fff4"
+      },
+      {
+        "entry": "stock/actions/release-batch",
+        "pin": "578cdb745b85ce1b14b7d2872c182c85796c769b17ea3f0a273e1b3f9310712a"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 16262,
+    "states": 52704,
+    "depth": 10
+  },
+  "flags": [],
+  "trace": {
+    "states": [
+      {
+        "phases": {
+          "accounts/invoice": {
+            "1": "unissued",
+            "2": "unissued"
+          },
+          "orders/order": {
+            "1": "unrecorded",
+            "2": "unrecorded"
+          },
+          "orders/shipment": {
+            "1": "unprepared",
+            "2": "unprepared"
+          },
+          "stock/batch": {
+            "1": "unrecorded",
+            "2": "unrecorded"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "stock/receive-batch",
+            "bindings": {
+              "request": "<<1, 1..4, 4>>"
+            }
+          }
+        ],
+        "phases": {
+          "accounts/invoice": {
+            "1": "unissued",
+            "2": "unissued"
+          },
+          "orders/order": {
+            "1": "unrecorded",
+            "2": "unrecorded"
+          },
+          "orders/shipment": {
+            "1": "unprepared",
+            "2": "unprepared"
+          },
+          "stock/batch": {
+            "1": "held",
+            "2": "unrecorded"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "stock/release-batch",
+            "bindings": {
+              "request": "<<1, 1, 0, TRUE>>"
+            }
+          }
+        ],
+        "phases": {
+          "accounts/invoice": {
+            "1": "unissued",
+            "2": "unissued"
+          },
+          "orders/order": {
+            "1": "unrecorded",
+            "2": "unrecorded"
+          },
+          "orders/shipment": {
+            "1": "unprepared",
+            "2": "unprepared"
+          },
+          "stock/batch": {
+            "1": "released",
+            "2": "unrecorded"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "orders/record-order",
+            "bindings": {
+              "request": "<<1, 1, 4>>"
+            }
+          }
+        ],
+        "phases": {
+          "accounts/invoice": {
+            "1": "unissued",
+            "2": "unissued"
+          },
+          "orders/order": {
+            "1": "draft",
+            "2": "unrecorded"
+          },
+          "orders/shipment": {
+            "1": "unprepared",
+            "2": "unprepared"
+          },
+          "stock/batch": {
+            "1": "released",
+            "2": "unrecorded"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "orders/confirm-order",
+            "bindings": {
+              "request": "<<1, 1, 4, 1..4>>"
+            }
+          }
+        ],
+        "phases": {
+          "accounts/invoice": {
+            "1": "unissued",
+            "2": "unissued"
+          },
+          "orders/order": {
+            "1": "open",
+            "2": "unrecorded"
+          },
+          "orders/shipment": {
+            "1": "unprepared",
+            "2": "unprepared"
+          },
+          "stock/batch": {
+            "1": "released",
+            "2": "unrecorded"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "orders/prepare-shipment",
+            "bindings": {
+              "request": "<<1, 1, {1, 2}>>"
+            }
+          }
+        ],
+        "phases": {
+          "accounts/invoice": {
+            "1": "unissued",
+            "2": "unissued"
+          },
+          "orders/order": {
+            "1": "open",
+            "2": "unrecorded"
+          },
+          "orders/shipment": {
+            "1": "prepared",
+            "2": "unprepared"
+          },
+          "stock/batch": {
+            "1": "released",
+            "2": "unrecorded"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "orders/collect-shipment",
+            "bindings": {
+              "s": "1"
+            }
+          }
+        ],
+        "phases": {
+          "accounts/invoice": {
+            "1": "unissued",
+            "2": "unissued"
+          },
+          "orders/order": {
+            "1": "open",
+            "2": "unrecorded"
+          },
+          "orders/shipment": {
+            "1": "collected",
+            "2": "unprepared"
+          },
+          "stock/batch": {
+            "1": "released",
+            "2": "unrecorded"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "orders/cancel-remainder",
+            "bindings": {
+              "o": "1"
+            }
+          }
+        ],
+        "phases": {
+          "accounts/invoice": {
+            "1": "unissued",
+            "2": "unissued"
+          },
+          "orders/order": {
+            "1": "cancelled",
+            "2": "unrecorded"
+          },
+          "orders/shipment": {
+            "1": "collected",
+            "2": "unprepared"
+          },
+          "stock/batch": {
+            "1": "released",
+            "2": "unrecorded"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "accounts/issue-invoice",
+            "bindings": {
+              "s": "1"
+            }
+          }
+        ],
+        "phases": {
+          "accounts/invoice": {
+            "1": "unpaid",
+            "2": "unissued"
+          },
+          "orders/order": {
+            "1": "cancelled",
+            "2": "unrecorded"
+          },
+          "orders/shipment": {
+            "1": "collected",
+            "2": "unprepared"
+          },
+          "stock/batch": {
+            "1": "released",
+            "2": "unrecorded"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "accounts/apply-receipt",
+            "bindings": {
+              "request": "<<1, 1, 1>>"
+            }
+          }
+        ],
+        "phases": {
+          "accounts/invoice": {
+            "1": "part-paid",
+            "2": "unissued"
+          },
+          "orders/order": {
+            "1": "cancelled",
+            "2": "unrecorded"
+          },
+          "orders/shipment": {
+            "1": "collected",
+            "2": "unprepared"
+          },
+          "stock/batch": {
+            "1": "released",
+            "2": "unrecorded"
+          }
+        }
+      }
+    ]
+  },
+  "rendered": [
+    {
+      "entry": "accounts/actions/apply-receipt",
+      "pin": "ff1726325ace1bd5c7e657ab858de95006cddf18c646a8e588a157506812b364",
+      "content": "Actor: Finance staff issuing invoices and truthfully matching and applying bank receipts (actor, world, person, -)\nSentence: Apply a new positive bank receipt to its issued invoice in one commit, reducing its remaining balance and the customer exposure together and recording its immutable reference, invoice and amount, or leave all balances unchanged on an exact successful replay.\nCases: partial, replay, settle\nGuard: For partial or settle, the receipt reference is unused and the positive amount is a whole multiple of £10 below or equal to the invoice remaining balance respectively; for replay, the reference, invoice and amount exactly match its earlier successful application even if the invoice is now settled.\nCites: 0838ae3f97618d716f9209d696760b2cb85efb9a8ba93156cae711808d5135bb, 7320a7366cca9dfba00772f5b64c9b02380224ac9fd1b2053052f24799895789, 8866d24052da740ec118b5d20e09687f891a6f33f1ff6f3e335c35c4229d8e65, a94561bd829c5ef3a2b0a62c065dba2651c9eec5e72ae308ae916860f41a90da"
+    },
+    {
+      "entry": "accounts/actions/issue-invoice",
+      "pin": "25d79331102414bdb9a35dc67d4672cf2ba7c25e71de0f34fe37e1bfb80f5b16",
+      "content": "Actor: Finance staff issuing invoices and truthfully matching and applying bank receipts (actor, world, person, -)\nSentence: In one commit issue the shipment-identified invoice for its collected quantity times £10 to its order customer and replace its pending obligation with the invoice, or return the same invoice on replay without resetting its paid balance.\nCases: new, replay\nGuard: For new, the shipment has been collected and has its durable outstanding obligation but no invoice; for replay, the shipment already has its invoice and the request contents match.\nCites: 0838ae3f97618d716f9209d696760b2cb85efb9a8ba93156cae711808d5135bb, 2446b8a7e5b0f4720093db1e62efa7d964994119a17285f0275dd9617e86c583, a94561bd829c5ef3a2b0a62c065dba2651c9eec5e72ae308ae916860f41a90da"
+    },
+    {
+      "entry": "orders/actions/cancel-remainder",
+      "pin": "e2170a51704bcc792d9d13fe21251de529eecfff29dea70054147daf71fae3a9",
+      "content": "Actor: Customers requesting cancellation of their confirmed open remainder (actor, world, person, -)\nSentence: Cancel the confirmed open remainder in one commit that releases only its reservations and credit commitment, returns uncollected picked cartons to free stock, and voids all uncollected shipments while preserving every collected shipment, obligation and invoice; an exact cancellation replay changes nothing.\nCases: new, replay\nGuard: For new, the order is confirmed and open with a positive uncollected remainder; for replay, that order already has a successful cancellation.\nCites: 0838ae3f97618d716f9209d696760b2cb85efb9a8ba93156cae711808d5135bb, 89c23755feffbfd0f31a98ba41f5181a4ff45f1c32a1d976c262925ef7c03b79, edab34792df2a1e4b0d548eccc834a3666ca552ee515a6e915165c3544c76a45"
+    },
+    {
+      "entry": "orders/actions/collect-shipment",
+      "pin": "ffd0a8da6efbfeb315eab5cc6b43350b8fc1fc9ae1a2b00b4045c6ae96e6dfb4",
+      "content": "Actor: The carrier and warehouse staff at the authorised physical handoff (actor, world, person, -)\nSentence: Authorise the handoff in one commit that records collection, removes shipment cartons from on-hand stock and reservation, and creates its durable invoice obligation, leaving an order open if a remainder exists and complete otherwise; an exact collection replay changes nothing.\nCases: complete, partial, replay\nGuard: For partial or complete, the shipment is prepared, its order is still open, every member is on hand and still reserved for it, every batch is currently released, and the case matches whether uncollected order cartons remain; for replay, the same shipment has already been collected.\nCites: 0838ae3f97618d716f9209d696760b2cb85efb9a8ba93156cae711808d5135bb, 1f99fea5247ad6dfa6c3cb3d35902fb99a92171811aba4d41be3a6cdd099d972, 2446b8a7e5b0f4720093db1e62efa7d964994119a17285f0275dd9617e86c583, a94561bd829c5ef3a2b0a62c065dba2651c9eec5e72ae308ae916860f41a90da"
+    },
+    {
+      "entry": "orders/actions/confirm-order",
+      "pin": "c38b3ad9186861f3e09ce1acfe918680eb6b439eef7a2fe1f041b91a7aeff621",
+      "content": "Actor: Sales representatives recording and confirming customer orders through the application (actor, world, person, -)\nSentence: A first successful confirmation reserves the order quantity of particular available cartons and commits its full value together, fixes customer and quantity, and remembers the result; an exact replay returns that result without changing current stock, exposure or order state.\nCases: new, replay\nGuard: For new, the draft has enough released on-hand unreserved cartons and adding its full quantity times £10 to current exposure does not exceed its customer limit; for replay, the order has a successful confirmation with identical contents.\nCites: 0838ae3f97618d716f9209d696760b2cb85efb9a8ba93156cae711808d5135bb, 33ad4d4805526390816ea74605ad3e7bbdeabf5c217fd0605d44017e47768112, a94561bd829c5ef3a2b0a62c065dba2651c9eec5e72ae308ae916860f41a90da"
+    },
+    {
+      "entry": "orders/actions/prepare-shipment",
+      "pin": "d59462d4deac8b42caeefc40a8afcc1c8febd07daacf3f0426510a309b190089",
+      "content": "Actor: Warehouse staff recording finished batches and preparing scanned shipments through the application (actor, world, person, -)\nSentence: In one commit prepare a new shipment with its complete non-empty carton set fixed forever and mark those cartons picked while still on hand and reserved, or return an exact successful preparation replay without any further effect even after collection or cancellation.\nCases: new, replay\nGuard: For new, the shipment identity is unused, the order is confirmed and open, and every scanned carton is reserved for that order, currently released, and in no other prepared shipment; for replay, the identity, order and entire carton set equal the successful preparation.\nCites: 0838ae3f97618d716f9209d696760b2cb85efb9a8ba93156cae711808d5135bb, 3f9a898f256d33ac2b06e310df58f0209f41faac7857a2d4f511fea929a069e9, 92e6872ef0376cc9e192662f4f0c5879e0befd630d32c40c35409a1a96f86777"
+    },
+    {
+      "entry": "orders/actions/record-order",
+      "pin": "8065850002ac92f3bcf3ff4b1265726373a64e69a464ae91673fd5fa77a47561",
+      "content": "Actor: Sales representatives recording and confirming customer orders through the application (actor, world, person, -)\nSentence: Record a draft for one customer and a positive whole number of cartons without reserving stock or credit, or return the same recorded order unchanged for an exact replay.\nCases: \nGuard: The customer has its fixed credit limit set before ordering, the quantity is positive and integral, and the order identity is unused or its successful original contents match exactly.\nCites: 0838ae3f97618d716f9209d696760b2cb85efb9a8ba93156cae711808d5135bb, 7320a7366cca9dfba00772f5b64c9b02380224ac9fd1b2053052f24799895789, f5a3ec77f1047ec587a7b4de6105626c9f346adfd64137b721e11fdadab881f3, fe95e69b81721f0fd01ae76026658ff2d320854b7f304dfcbef2d00dfdd7daaa"
+    },
+    {
+      "entry": "stock/actions/receive-batch",
+      "pin": "75373cedf831cf406be1e23850082a1d63b50f6fefb39f67c052efa196c8fff4",
+      "content": "Actor: Warehouse staff recording finished batches and preparing scanned shipments through the application (actor, world, person, -)\nSentence: Record one completed batch and its distinct carton identities on hold in one commit, or return its successful recorded receipt unchanged on an exact replay without resetting quality or adding cartons.\nCases: \nGuard: The batch identity is new and its quantity equals its distinct carton identities, none previously recorded; or the successful batch identity is replayed with exactly its original contents.\nCites: 0838ae3f97618d716f9209d696760b2cb85efb9a8ba93156cae711808d5135bb, bb73df1b3320915b4c937ee5c560386fc37c9bb0ff0260e6cf3e2c80829e59d4, f5a3ec77f1047ec587a7b4de6105626c9f346adfd64137b721e11fdadab881f3"
+    },
+    {
+      "entry": "stock/actions/release-batch",
+      "pin": "578cdb745b85ce1b14b7d2872c182c85796c769b17ea3f0a273e1b3f9310712a",
+      "content": "Actor: Quality assurance staff making revision-checked hold and release decisions (actor, world, person, -)\nSentence: A fresh QA release changes the held batch to released and increments its quality revision in one commit; an exact replay of a successful release returns its recorded result and leaves the current quality and revision unchanged.\nCases: new, replay\nGuard: For new, inspection is complete and the unused operation identity names the current quality revision; for replay, the operation identity and every supplied field match a successful release, regardless of intervening decisions.\nCites: 0838ae3f97618d716f9209d696760b2cb85efb9a8ba93156cae711808d5135bb, b696daefa4be3eaa05a3bc6091774dcf265a234c72b4151e4f97ad23b38cc2ce, bb73df1b3320915b4c937ee5c560386fc37c9bb0ff0260e6cf3e2c80829e59d4"
+    }
+  ],
+  "established": "2026-11-14T01:43:29.020Z",
+  "previous": null,
+  "digest": "226e85b6b2dcbd20e72ebd8e1a43b25e7432ade094d7427a14362334bdbab470"
+}

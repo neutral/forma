@@ -1,0 +1,12 @@
+Target ==
+  /\ (focus = 1)
+  /\ (hazard = 7)
+  /\ (env.stage = 2)
+  /\ (env.mode = 3)
+  /\ (~ENABLED (ReleaseBatchRequest(<<1,1,0,TRUE>>)))
+  /\ (db.qaKind[1] = 1 /\ db.qaBatch[1] = 1 /\ db.qaRevision[1] = 0 /\ db.qaInspected[1] = 1 /\ db.batchPhase[1] = "released" /\ db.revision[1] = 1 /\ (\A k \in Decisions \ {1}: db.qaKind[k] = 0))
+  /\ (env.last = NoCmd)
+  /\ (env.previous = NoCmd)
+  /\ (env.retry = NoCmd)
+  /\ (env.delayed = NoCmd)
+  /\ (env.samples = 0)

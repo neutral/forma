@@ -1,0 +1,81 @@
+{
+  "name": "lifecycles-stock/parts/stock/journeys/quality-replay/lifecycle-path",
+  "kind": "lifecycle-path",
+  "expected": {
+    "outcome": "admitted"
+  },
+  "bounds": "phase level",
+  "limits": {
+    "seconds": 60
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "design/parts/stock/actions.md",
+        "sha256": "6225655b6efc5aad7d28211c73b523256f0cf66ff123b5acd5e35557a6cd8eec"
+      },
+      {
+        "path": "design/parts/stock/lifecycles/batch/README.md",
+        "sha256": "e8defdb7d369b95f6d5d7050954428a24209ae0a0051a4ec81a5accca92ad35e"
+      },
+      {
+        "generated": "lifecycles.json",
+        "sha256": "662c1780f3682307f8928759c1c2df084d41cd90db8401f64109063e981f5bd1"
+      },
+      {
+        "generated": "question.json",
+        "sha256": "3e8e8f2eae9507766f664f9ed77cb8f1074de73a9502334b4d296b26d6c0f5e1"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "stock/actions/hold-batch",
+        "pin": "8c7946c96bf86aa390b881622620704e8aedbe6860534b9c109b0b2240b890b3"
+      },
+      {
+        "entry": "stock/actions/receive-batch",
+        "pin": "75373cedf831cf406be1e23850082a1d63b50f6fefb39f67c052efa196c8fff4"
+      },
+      {
+        "entry": "stock/actions/release-batch",
+        "pin": "578cdb745b85ce1b14b7d2872c182c85796c769b17ea3f0a273e1b3f9310712a"
+      },
+      {
+        "entry": "stock/journeys/quality-replay",
+        "pin": "56b08d30f03b82b91fae1f1a27000a55ed504d27b362ae4d127be96d361fb657"
+      },
+      {
+        "entry": "stock/lifecycles/batch",
+        "pin": "4831e4b7971a4d5b8597c2c584476086af6153221a3ede61e80cd8fe2323b1a0"
+      }
+    ],
+    "engine": {
+      "name": "lifecycle",
+      "version": "0.1.0"
+    },
+    "runtime": {
+      "name": "node",
+      "version": "24.22.1"
+    },
+    "library": {
+      "name": "xstate",
+      "version": "5.33.3"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "admitted"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 0,
+    "combinations": null
+  },
+  "flags": [],
+  "established": "2026-11-13T22:07:58.904Z",
+  "previous": null,
+  "digest": "930804cb1b9ec5cd9d77bb33765f0044f73116bf23f32ba7fcc242264ecaffaf"
+}

@@ -1,0 +1,12 @@
+Target ==
+  /\ (focus = 6)
+  /\ (hazard = 7)
+  /\ (env.stage = 2)
+  /\ (env.mode = 3)
+  /\ (~ENABLED (IssueInvoice(1)))
+  /\ (db.issued = {1} /\ db.invoiceCount[1] = 1 /\ db.invoiceOriginal[1] = 2 /\ db.balance[1] = 2 /\ db.invoiceCustomer[1] = 1 /\ (\A p \in Receipts: db.receiptShipment[p] = 0))
+  /\ (env.last = NoCmd)
+  /\ (env.previous = NoCmd)
+  /\ (env.retry = NoCmd)
+  /\ (env.delayed = NoCmd)
+  /\ (env.samples = 0)

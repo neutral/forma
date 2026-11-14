@@ -1,0 +1,21 @@
+{
+  "platform": "darwin",
+  "arch": "arm64",
+  "jreVersion": "21.0.13+9",
+  "jreFile": "OpenJDK21U-jre_aarch64_mac_hotspot_21.0.13_9.tar.gz",
+  "jreUrl": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13%2B9/OpenJDK21U-jre_aarch64_mac_hotspot_21.0.13_9.tar.gz",
+  "jreBytes": "47935740",
+  "jreSha256": "225bab0a09491ef06835488cd942f5d2befa9a0410a2484f0c8bbcf7506ec09a",
+  "jreRoot": "jdk-21.0.13+9-jre",
+  "jreJava": "Contents/Home/bin/java",
+  "tlcVersion": "2.19 of 08 August 2024",
+  "tlcFile": "tla2tools-1.7.4.jar",
+  "tlcUrl": "https://github.com/tlaplus/tlaplus/releases/download/v1.7.4/tla2tools.jar",
+  "tlcBytes": "2274532",
+  "tlcSha256": "936a262061c914694dfd669a543be24573c45d5aa0ff20a8b96b23d01e050e88",
+  "alloyVersion": "6.2.0",
+  "alloyFile": "org.alloytools.alloy.dist-6.2.0.jar",
+  "alloyUrl": "https://github.com/AlloyTools/org.alloytools.alloy/releases/download/v6.2.0/org.alloytools.alloy.dist.jar",
+  "alloyBytes": "21062377",
+  "alloySha256": "6b8c1cb5bc93bedfc7c61435c4e1ab6e688a242dc702a394628d9a9801edb78d"
+}

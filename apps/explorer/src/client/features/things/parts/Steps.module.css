@@ -1,0 +1,4 @@
+.steps { margin: 0.3rem 0; padding-left: 1.4rem; }
+.steps > li { margin: 0.15rem 0; }
+.current { font-weight: 600; }
+.current::marker { color: var(--blue-9); }

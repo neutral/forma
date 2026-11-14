@@ -1,0 +1,38 @@
+/* the top strip: general notes at left, the title block in the corner of the border */
+.top { display: grid; grid-template-columns: minmax(0, 1fr) 24rem; margin: 0 calc(-1 * var(--gutter)); border-bottom: 1px solid var(--blue-7); }
+.lead { padding: 1.7rem var(--gutter) 1.4rem; }
+.project { font-size: 19px; line-height: 1.2; font-weight: 600; letter-spacing: 0.01em; margin: 0 0 0.9rem; }
+.notesCap { margin-bottom: 0.25rem; }
+.general { margin: 0; padding-left: 1.6rem; font-size: 12.5px; line-height: 1.6; }
+.general > li::marker { color: var(--blue-5); }
+.toc { font-size: 12px; margin-top: 1rem; }
+.toc a { color: var(--blue-7); margin-right: 0.9rem; white-space: nowrap; }
+/* drawn, not written, so that it is no word on the page */
+.separator::before { content: '·'; margin-right: 0.9rem; color: var(--blue-3); }
+
+.block { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-content: start; border-left: 1px solid var(--blue-7); font-size: 11.5px; line-height: 1.5; }
+.cell { padding: 0.4rem 0.7rem 0.5rem; border-bottom: 1px solid var(--blue-7); }
+.cell + .cell:not(.wide) { border-left: 1px solid var(--blue-7); }
+.wide { grid-column: 1 / -1; }
+.wide + .cell:not(.wide) { border-left: 0; }
+.block > .cell:last-child { border-bottom: 0; }
+.cellCap { font-size: 9px; margin-bottom: 0.12rem; }
+
+.switch { display: inline-flex; border: 1px solid var(--blue-7); border-radius: 3px; overflow: hidden; }
+.option { all: unset; cursor: pointer; padding: 0.06rem 0.5rem; color: var(--blue-7); }
+.option + .option { border-left: 1px solid var(--blue-7); }
+.option[data-selected] { color: var(--paper); background: var(--blue-7); }
+.option[data-focus-visible] { outline: 2px solid var(--blue-9); outline-offset: -2px; }
+
+.later { all: unset; cursor: pointer; color: var(--blue-7); margin-left: 0.5rem; text-decoration: underline; text-underline-offset: 3px; }
+.later[data-focus-visible] { outline: 2px solid var(--blue-7); outline-offset: 2px; }
+
+.revisions { border-collapse: collapse; width: 100%; }
+.revisions td { padding: 0.12rem 0.5rem 0.12rem 0; vertical-align: top; }
+.revisions td:first-child { width: 1.9rem; }
+.revisions td:last-child { white-space: nowrap; color: var(--blue-5); padding-right: 0; text-align: right; }
+
+@media (max-width: 64rem) {
+  .top { grid-template-columns: minmax(0, 1fr); }
+  .block { border-left: 0; border-top: 1px solid var(--blue-7); }
+}

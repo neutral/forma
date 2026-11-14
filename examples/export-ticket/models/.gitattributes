@@ -1,0 +1,3 @@
+* -text -ident -filter -working-tree-encoding
+*.json -merge
+receipt merge=union

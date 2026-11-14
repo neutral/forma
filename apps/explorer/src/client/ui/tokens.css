@@ -1,0 +1,37 @@
+/* The reading's look (presentation.md §explorer): a drawing sheet. White paper, two inks, two faces and a red pencil.
+   Black is what the developer wrote. Blue is everything Forma drew or says: its notes, names, marks,
+   lines and pictures. Red is only a revision, what is missing where something should be taken on, and a
+   scenario's walk lit on its lifecycle. Lines carry the structure, by weight. No pattern or texture. */
+:root {
+  color-scheme: light;
+  --paper: #ffffff;
+  --ink: #15191e; /* the developer's words */
+  --blue-9: #1f3a5a; /* Forma's text */
+  --blue-7: #3d6288; /* lines that carry structure, labels, marks */
+  /* secondary text, dark enough to read at 4.5:1 or more on paper and on both washes */
+  --blue-5: #4f6e8f;
+  --blue-3: #b9cadb; /* hairlines */
+  --blue-1: #edf2f7; /* wash: an opened thing */
+  --blue-0: #f6f8fb; /* lighter wash */
+  --veil: rgba(31, 58, 90, 0.26); /* over the sheet, behind the help dialog */
+  --red: #b0412a;
+  --red-1: #f9ece8;
+  --gutter: 2.2rem;
+  --sans: -apple-system, 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+}
+@media (max-width: 64rem) {
+  :root { --gutter: 1.1rem; }
+}
+
+/* the paper and the developer's face, under everything */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 1rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font: 16.5px/1.65 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}

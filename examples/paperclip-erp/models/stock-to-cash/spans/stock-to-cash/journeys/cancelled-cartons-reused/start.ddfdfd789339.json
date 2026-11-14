@@ -1,0 +1,114 @@
+{
+  "name": "stock-to-cash/spans/stock-to-cash/journeys/cancelled-cartons-reused/start.ddfdfd789339",
+  "kind": "start",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "path": "models/stock-to-cash/spans/stock-to-cash/journeys/cancelled-cartons-reused/schedule.md",
+        "sha256": "4b81f78e838d9bdcdbbdc0ced6ffb633cec71254c200d5c01e1271d74728ab89"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "ad7b02438a6d48a29f0a7a7dc8e5ded5e6adff8816a33ab3f4598139b0fa9f47"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "7d5c04ffa5b0ff9c946bf16ad391853a0b6df69a4423d6462e6f620e87615a58"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "orders/lifecycles/order",
+        "pin": "402901e0f2391041097b56375aeead380ca8ff09736118b5cdf7d7af2b41f8fc"
+      },
+      {
+        "entry": "orders/lifecycles/shipment",
+        "pin": "d4acb7113a9c3c1959dac3eb3cb0e1e3b8ec7586eec6dcc9c0b6f86f43453d89"
+      },
+      {
+        "entry": "stock-to-cash/journeys/cancelled-cartons-reused",
+        "pin": "b1e49be46f50644d88b0a02b92549871b30d433decfb2bcfbabbb2b2c18b162d"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1160,
+    "states": null,
+    "depth": null
+  },
+  "flags": [],
+  "trace": {
+    "states": [
+      {
+        "phases": {
+          "accounts/invoice": {
+            "batch, first-sale": "unissued",
+            "second-sale": "unissued"
+          },
+          "orders/order": {
+            "batch, first-sale": "unrecorded",
+            "second-sale": "unrecorded"
+          },
+          "orders/shipment": {
+            "batch, first-sale": "unprepared",
+            "second-sale": "unprepared"
+          },
+          "stock/batch": {
+            "batch, first-sale": "unrecorded",
+            "second-sale": "unrecorded"
+          }
+        }
+      }
+    ]
+  },
+  "rendered": [],
+  "established": "2026-11-13T23:31:17.830Z",
+  "previous": null,
+  "digest": "d2720ea69cde4aebf38fa840fc956c0fe37b6043200ba8c86294f40dc69db97a"
+}

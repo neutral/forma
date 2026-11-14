@@ -1,0 +1,97 @@
+{
+  "name": "stock-to-cash/world/orders/sales/delay.ddfdfd789339",
+  "kind": "misbehaviour",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "path": "models/stock-to-cash/world/orders/sales/delay.tla",
+        "sha256": "8a4bfdf1340d5008013c7ef8d60c656ab85742a2e6dc6c07b46cda471f1101d9"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "c05c265b3a8c2e52d455eaa4ec870d834f52fc2ffc886c55ffef81a404f61e28"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "c9f11a7c0bec04dc738c98a08c6515f40401d2627443577ccc06b9523b9b4180"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "orders/actions/confirm-order",
+        "pin": "c38b3ad9186861f3e09ce1acfe918680eb6b439eef7a2fe1f041b91a7aeff621"
+      },
+      {
+        "entry": "orders/actions/record-order",
+        "pin": "8065850002ac92f3bcf3ff4b1265726373a64e69a464ae91673fd5fa77a47561"
+      },
+      {
+        "entry": "orders/boundary/sales",
+        "pin": "b8b4cfd82be0cb1184071621aaf4bcb284cdfe60125e222abb3c27c797b413ed"
+      },
+      {
+        "entry": "stock/actions/receive-batch",
+        "pin": "75373cedf831cf406be1e23850082a1d63b50f6fefb39f67c052efa196c8fff4"
+      },
+      {
+        "entry": "stock/actions/release-batch",
+        "pin": "578cdb745b85ce1b14b7d2872c182c85796c769b17ea3f0a273e1b3f9310712a"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1608,
+    "states": 3035,
+    "depth": 6
+  },
+  "flags": [],
+  "established": "2026-11-14T00:28:47.472Z",
+  "previous": null,
+  "digest": "f47382ae50b324d812532149ea937647487375e5c09119b0ab24f5c9531c25e1"
+}

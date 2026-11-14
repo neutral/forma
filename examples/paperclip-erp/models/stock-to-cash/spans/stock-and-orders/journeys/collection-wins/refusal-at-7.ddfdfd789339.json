@@ -1,0 +1,123 @@
+{
+  "name": "stock-to-cash/spans/stock-and-orders/journeys/collection-wins/refusal-at-7.ddfdfd789339",
+  "kind": "refusal",
+  "expected": {
+    "outcome": "not enabled",
+    "step": 7
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "path": "models/stock-to-cash/spans/stock-and-orders/journeys/collection-wins/schedule.md",
+        "sha256": "2f0dd025e77a7788634df0764eff12d7b4006698c630a942bff5a5ba2db8307b"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "38caafaef4f3b0e685468720762a1d001d8d458d118cec87bbaba4e4f855915f"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "ad3a3f24b2f6c1a32cead57e5cddf57911538b589311a45549072628cf7d147d"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "orders/actions/cancel-remainder",
+        "pin": "e2170a51704bcc792d9d13fe21251de529eecfff29dea70054147daf71fae3a9"
+      },
+      {
+        "entry": "orders/actions/collect-shipment",
+        "pin": "ffd0a8da6efbfeb315eab5cc6b43350b8fc1fc9ae1a2b00b4045c6ae96e6dfb4"
+      },
+      {
+        "entry": "orders/actions/confirm-order",
+        "pin": "c38b3ad9186861f3e09ce1acfe918680eb6b439eef7a2fe1f041b91a7aeff621"
+      },
+      {
+        "entry": "orders/actions/prepare-shipment",
+        "pin": "d59462d4deac8b42caeefc40a8afcc1c8febd07daacf3f0426510a309b190089"
+      },
+      {
+        "entry": "orders/actions/record-order",
+        "pin": "8065850002ac92f3bcf3ff4b1265726373a64e69a464ae91673fd5fa77a47561"
+      },
+      {
+        "entry": "orders/lifecycles/order",
+        "pin": "402901e0f2391041097b56375aeead380ca8ff09736118b5cdf7d7af2b41f8fc"
+      },
+      {
+        "entry": "orders/lifecycles/shipment",
+        "pin": "d4acb7113a9c3c1959dac3eb3cb0e1e3b8ec7586eec6dcc9c0b6f86f43453d89"
+      },
+      {
+        "entry": "stock-and-orders/journeys/collection-wins",
+        "pin": "6d0be0cf014cb295139356f09c9918f06f46217a1c6d004b70778a16db502573"
+      },
+      {
+        "entry": "stock/actions/receive-batch",
+        "pin": "75373cedf831cf406be1e23850082a1d63b50f6fefb39f67c052efa196c8fff4"
+      },
+      {
+        "entry": "stock/actions/release-batch",
+        "pin": "578cdb745b85ce1b14b7d2872c182c85796c769b17ea3f0a273e1b3f9310712a"
+      },
+      {
+        "entry": "stock/lifecycles/batch",
+        "pin": "4831e4b7971a4d5b8597c2c584476086af6153221a3ede61e80cd8fe2323b1a0"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "not enabled"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1181,
+    "states": 77,
+    "depth": 7
+  },
+  "flags": [],
+  "cases": [],
+  "established": "2026-11-13T22:36:54.573Z",
+  "previous": null,
+  "digest": "9e282abd2f0eaa53c8b98db8334ebe5bc27c2fa733997382f88f7048870c987d"
+}

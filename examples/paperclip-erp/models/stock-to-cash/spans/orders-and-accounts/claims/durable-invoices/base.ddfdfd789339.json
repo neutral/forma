@@ -1,0 +1,81 @@
+{
+  "name": "stock-to-cash/spans/orders-and-accounts/claims/durable-invoices/base.ddfdfd789339",
+  "kind": "base",
+  "expected": {
+    "outcome": "no violation"
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "path": "models/stock-to-cash/spans/orders-and-accounts/claims/durable-invoices/encoding.tla",
+        "sha256": "1e52e291e4be0759864ee25a2634987bee4f7f1cafb09b993264f65c7919f62f"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "9458da856fdc997b4a698cfb8ddea5eca394d940b91f73ed01174e8ff033f8d4"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "526d0611e2d532366f73e1565b5bce35c12a5715d85638df0c3bfc22338ea12e"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "orders-and-accounts/claims/durable-invoices",
+        "pin": "7010a1c55aab43e46f8f3fc825f5c14785f2be2a18aeda822eeb98fb5c3598e2"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "no violation"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1047810,
+    "states": 1135291,
+    "depth": 24
+  },
+  "flags": [],
+  "established": "2026-11-14T01:43:11.549Z",
+  "previous": null,
+  "digest": "84c59d00defa7f0d0359132720ec0195889462fe7b9b8e89e17afbcd46f82042"
+}

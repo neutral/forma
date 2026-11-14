@@ -1,0 +1,29 @@
+/* a lifecycle drawn: blue line work; a scenario's path in red, dashed where it must be refused */
+.frame { width: 100%; margin: 0.4rem 0 0.2rem; font-family: var(--mono); color: var(--blue-9); }
+.frame :global(.react-flow) { background: transparent; }
+.frame :global(.react-flow__node) { cursor: default; }
+
+.phase { position: relative; }
+.handle { opacity: 0; pointer-events: none; }
+.box { height: 34px; display: grid; place-items: center; padding: 0 0.4rem; white-space: nowrap; background: var(--paper); border: 1.2px solid var(--blue-7); border-radius: 6px; font: 600 11px/1 var(--mono); color: var(--blue-9); }
+.reached { border: 2px solid var(--red); }
+.end { border-width: 2.5px; }
+/* the initial phase: a dot and a short line into its box */
+.start { position: absolute; left: -18px; top: 13px; width: 8px; height: 8px; border-radius: 50%; background: var(--blue-5); }
+.start::after { content: ''; position: absolute; left: 8px; top: 3.5px; width: 8px; border-top: 1px solid var(--blue-5); }
+.under { padding: 2px 4px 0; font-size: 9.5px; line-height: 12px; color: var(--blue-5); text-shadow: 0 0 2px var(--bg, var(--blue-1)), 0 0 2px var(--bg, var(--blue-1)), 0 0 3px var(--bg, var(--blue-1)); }
+.lit { color: var(--red); fill: var(--red); font-weight: 650; }
+.open { color: var(--red); }
+
+.edge { fill: none; stroke: var(--blue-5); stroke-width: 1; }
+.edgeOn { stroke: var(--red); stroke-width: 2; }
+.edgeRefused { stroke-dasharray: 5 4; }
+.head { fill: var(--blue-5); }
+.headOn { fill: var(--red); }
+.label { font: 9.5px var(--mono); fill: var(--blue-5); paint-order: stroke; stroke: var(--bg, var(--blue-1)); stroke-width: 4px; stroke-linejoin: round; }
+
+.refused { margin: 0 0 0.3rem; font-size: 9.5px; font-weight: 650; color: var(--red); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .box, .edge, .head { transition: stroke 0.25s, border-color 0.25s, fill 0.25s; }
+}

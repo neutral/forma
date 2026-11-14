@@ -1,0 +1,5 @@
+.onModel { margin: 0 0 0.8rem; }
+.onModel:last-child { margin-bottom: 0; }
+.head { font-weight: 600; margin-bottom: 0.25rem; }
+.note { font-weight: 400; color: var(--blue-5); }
+.code { font-weight: 400; font-size: 0.94em; }

@@ -1,0 +1,3 @@
+* -text -ident -filter -working-tree-encoding
+receipt merge=union
+brief/** !text !ident !filter !working-tree-encoding !merge

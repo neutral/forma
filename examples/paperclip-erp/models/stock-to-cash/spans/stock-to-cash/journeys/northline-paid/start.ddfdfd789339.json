@@ -1,0 +1,118 @@
+{
+  "name": "stock-to-cash/spans/stock-to-cash/journeys/northline-paid/start.ddfdfd789339",
+  "kind": "start",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "path": "models/stock-to-cash/spans/stock-to-cash/journeys/northline-paid/schedule.md",
+        "sha256": "075180f6e301546999252707476deca170f292d0a2d6b06656227465d8e986e9"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "ad7b02438a6d48a29f0a7a7dc8e5ded5e6adff8816a33ab3f4598139b0fa9f47"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "13f9b78dc69c61e9e72b8fff0e84fb53f2c9834dd81bad95f8f308c47e840ee7"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "accounts/lifecycles/invoice",
+        "pin": "19e2ef8abe0a95df17a965a9f624d3ce2a5a8d1b35bb9e173713a3e2779cb7ab"
+      },
+      {
+        "entry": "orders/lifecycles/order",
+        "pin": "402901e0f2391041097b56375aeead380ca8ff09736118b5cdf7d7af2b41f8fc"
+      },
+      {
+        "entry": "orders/lifecycles/shipment",
+        "pin": "d4acb7113a9c3c1959dac3eb3cb0e1e3b8ec7586eec6dcc9c0b6f86f43453d89"
+      },
+      {
+        "entry": "stock-to-cash/journeys/northline-paid",
+        "pin": "7e87476fac9148dc8fc07ff8a6b498f4b3f7c20264dc2d7a37eae8d9dd802b74"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1445,
+    "states": null,
+    "depth": null
+  },
+  "flags": [],
+  "trace": {
+    "states": [
+      {
+        "phases": {
+          "accounts/invoice": {
+            "batch, invoice-one, order-o, shipment-one": "unissued",
+            "invoice-two, shipment-two": "unissued"
+          },
+          "orders/order": {
+            "batch, invoice-one, order-o, shipment-one": "unrecorded",
+            "invoice-two, shipment-two": "unrecorded"
+          },
+          "orders/shipment": {
+            "batch, invoice-one, order-o, shipment-one": "unprepared",
+            "invoice-two, shipment-two": "unprepared"
+          },
+          "stock/batch": {
+            "batch, invoice-one, order-o, shipment-one": "unrecorded",
+            "invoice-two, shipment-two": "unrecorded"
+          }
+        }
+      }
+    ]
+  },
+  "rendered": [],
+  "established": "2026-11-13T23:59:51.432Z",
+  "previous": null,
+  "digest": "bf96bd625ca467aa8940755979d0569e624984257228645e9bfa53bb6b66ccc1"
+}

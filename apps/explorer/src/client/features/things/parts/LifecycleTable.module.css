@@ -1,0 +1,5 @@
+.scroll { overflow-x: auto; }
+.grid { border-collapse: collapse; font-size: 11.5px; margin: 0.3rem 0; background: var(--paper); }
+.grid th, .grid td { border: 1px solid var(--blue-3); padding: 0.25rem 0.5rem; text-align: left; vertical-align: top; }
+.grid thead th { color: var(--blue-7); font-weight: 600; }
+.cases { white-space: pre-line; }

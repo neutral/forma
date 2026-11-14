@@ -1,0 +1,89 @@
+{
+  "name": "stock-to-cash/world/stock/qa/drop.ddfdfd789339",
+  "kind": "misbehaviour",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "path": "models/stock-to-cash/world/stock/qa/drop.tla",
+        "sha256": "2039addcc66246785ec95330c47cb39fc1fb08d809987124f149d1bf3179ec79"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "c05c265b3a8c2e52d455eaa4ec870d834f52fc2ffc886c55ffef81a404f61e28"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "971e3483554b046739327af77eca4c689c78688589a5b4e608895d6819cdeada"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "stock/actions/receive-batch",
+        "pin": "75373cedf831cf406be1e23850082a1d63b50f6fefb39f67c052efa196c8fff4"
+      },
+      {
+        "entry": "stock/actions/release-batch",
+        "pin": "578cdb745b85ce1b14b7d2872c182c85796c769b17ea3f0a273e1b3f9310712a"
+      },
+      {
+        "entry": "stock/boundary/qa",
+        "pin": "e282e4ae748838208977a7745349ed342657b62f8dda92ae6adf084287ce0a84"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1219,
+    "states": 511,
+    "depth": 4
+  },
+  "flags": [],
+  "established": "2026-11-14T00:28:52.294Z",
+  "previous": null,
+  "digest": "ad33939bf47210c9338b312ff0336ca9fb36f529639f79bf76cb005b1e4957e4"
+}

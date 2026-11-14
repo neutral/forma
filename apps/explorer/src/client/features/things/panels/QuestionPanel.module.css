@@ -1,0 +1,2 @@
+.alternative { margin: 0.2rem 0 0.6rem; padding: 0.4rem 0.6rem; border: 1px solid var(--blue-3); background: var(--paper); }
+.picked { border-color: var(--blue-7); }

@@ -1,0 +1,82 @@
+{
+  "name": "export-ticket-tlc/parts/export-ticket/journeys/no-repeat-completion/path-to-2.344f2c25ca7a",
+  "kind": "path",
+  "expected": {
+    "outcome": "reached",
+    "step": 2
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 300,
+    "megabytes": 2048
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "4f09199d60faf474bbe8b61daa62c807c8c0fff29f32d4f9c804347ea121dc8d"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "795db785038e2b0b55dfedea6524cf84424fafee44d94726315b3efa19eadd0f"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/journeys/no-repeat-completion/schedule.md",
+        "sha256": "9ee8fcb9218266544c899feab24f018e47329a790ef5962558c07e9535c46a1f"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "c6a0442cfcb7c0d375d6b837a65a1c8720839334924c1215a42786384e151d47"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "a6024a977c9a02230fae9f200bd730f8cdf39f027ce3ab8e8808707a98139a56"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/check",
+        "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9"
+      },
+      {
+        "entry": "export-ticket/actions/complete",
+        "pin": "65a9f50a3fa79df8d3e61828d85e92098cbe0df8cc81d2eca5eea3edc98ddc1d"
+      },
+      {
+        "entry": "export-ticket/journeys/no-repeat-completion",
+        "pin": "0837b0eaed9b5ff8dae87d69a90ffa3af8cb0d79872083ed51a84764002174d8"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "d84a4e03d3bb"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1117,
+    "states": 3,
+    "depth": 3
+  },
+  "flags": [],
+  "cases": [],
+  "established": "2026-11-12T03:51:58.732Z",
+  "previous": null,
+  "digest": "01b0f552bbbcc17aa8d49b3a28d48e62cde0d68a496458a690eb45b22ee17d1f"
+}

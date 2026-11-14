@@ -1,0 +1,3 @@
+.rev { display: inline-block; flex: none; vertical-align: -4px; margin-right: 0.3rem; overflow: visible; }
+.rev path { fill: var(--paper); stroke: var(--red); stroke-width: 1.1; stroke-linejoin: round; }
+.rev text { font: 600 9.5px var(--mono); fill: var(--red); }

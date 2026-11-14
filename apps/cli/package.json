@@ -1,0 +1,28 @@
+{
+  "name": "@forma/cli",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Examines the claims of a software design with formal methods, at the design level.",
+  "license": "CC0-1.0 OR 0BSD",
+  "repository": "github:neutral/forma",
+  "type": "module",
+  "bin": {
+    "forma": "./src/cli.mjs",
+    "forma-toolchain": "./src/setup-toolchain.mjs"
+  },
+  "exports": {
+    "./graph": "./src/explore/graph.mjs"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test \"tests/**/*.test.mjs\"",
+    "toolchain": "node src/setup-toolchain.mjs"
+  },
+  "dependencies": {
+    "markdown-it": "14.3.3",
+    "xstate": "5.33.3",
+    "yaml": "2.9.1"
+  }
+}

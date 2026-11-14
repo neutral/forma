@@ -1,0 +1,201 @@
+{
+  "name": "export-ticket-tlc/parts/export-ticket/claims/one-receipt/witness-overlap-and-lost-reply.344f2c25ca7a",
+  "kind": "witness",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 300,
+    "megabytes": 2048
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "4f09199d60faf474bbe8b61daa62c807c8c0fff29f32d4f9c804347ea121dc8d"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "795db785038e2b0b55dfedea6524cf84424fafee44d94726315b3efa19eadd0f"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/claims/one-receipt/witness-overlap-and-lost-reply.md",
+        "sha256": "8d77f1d275879381da94ae86b440c65569ec5c7a616f058ae6932ebf2d4a3441"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "931e2b1c72bb5c0b3bf1c1f324f94a690e8c1d2d5641817114c5823f314903ef"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "f20abe16c55848e29b55f1bf05d62694d9d49cab391af828a8ad549013c50815"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/check",
+        "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9"
+      },
+      {
+        "entry": "export-ticket/actions/complete",
+        "pin": "65a9f50a3fa79df8d3e61828d85e92098cbe0df8cc81d2eca5eea3edc98ddc1d"
+      },
+      {
+        "entry": "export-ticket/actions/return-receipt",
+        "pin": "1289eb21f419ab97dc2668baf53c30eae27a926665cd6f5e4c3d05cdef3b0a6a"
+      },
+      {
+        "entry": "export-ticket/boundary/recipient",
+        "pin": "1bc8bb0925adf07d9aa51749c0ed12112b418222e7dfc3db0dca07889021dd79"
+      },
+      {
+        "entry": "export-ticket/claims/one-receipt",
+        "pin": "2259f509c1077d3a0124e8399dde1a246736b1f6c521c39f6dc46eaa0ccdf9fd"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "d84a4e03d3bb"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1334,
+    "states": 2678,
+    "depth": 6
+  },
+  "flags": [],
+  "trace": {
+    "states": [
+      {
+        "phases": {
+          "export-ticket/ticket-state": {
+            "\"t\"": "active-unclaimed"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "export-ticket/check",
+            "bindings": {
+              "t": "\"t\"",
+              "k": "\"a\""
+            }
+          }
+        ],
+        "phases": {
+          "export-ticket/ticket-state": {
+            "\"t\"": "active-unclaimed"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "export-ticket/check",
+            "bindings": {
+              "t": "\"t\"",
+              "k": "\"b\""
+            }
+          }
+        ],
+        "phases": {
+          "export-ticket/ticket-state": {
+            "\"t\"": "active-unclaimed"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "export-ticket/complete",
+            "bindings": {
+              "t": "\"t\"",
+              "k": "\"a\"",
+              "r": "\"r-a\""
+            }
+          }
+        ],
+        "phases": {
+          "export-ticket/ticket-state": {
+            "\"t\"": "active-claimed"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "misbehaviour": "export-ticket/recipient/drop",
+            "bindings": {
+              "k": "\"a\""
+            }
+          }
+        ],
+        "phases": {
+          "export-ticket/ticket-state": {
+            "\"t\"": "active-claimed"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "export-ticket/return-receipt",
+            "bindings": {
+              "t": "\"t\"",
+              "k": "\"a\""
+            }
+          }
+        ],
+        "phases": {
+          "export-ticket/ticket-state": {
+            "\"t\"": "active-claimed"
+          }
+        }
+      }
+    ]
+  },
+  "rendered": [
+    {
+      "entry": "export-ticket/actions/check",
+      "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9",
+      "content": "Actor: The export-ticket service that owns tickets, remembered checks and receipts (service, machine, -, -)\nSentence: The service checks an active ticket with no receipt and remembers that this request key passed without claiming the ticket or creating a receipt.\nCases: \nGuard: This request key has not previously been checked or completed for this ticket.\nCites: 63974e0ade6cd6f0572d2131ff59d8cbd7bb03bb4acc862f10d7d59fa91155f7"
+    },
+    {
+      "entry": "export-ticket/actions/complete",
+      "pin": "65a9f50a3fa79df8d3e61828d85e92098cbe0df8cc81d2eca5eea3edc98ddc1d",
+      "content": "Actor: The export-ticket service that owns tickets, remembered checks and receipts (service, machine, -, -)\nSentence: Using this request key's remembered passing check without rechecking the ticket's current expiry or claim phase or the presence of another receipt, the service creates a fresh receipt and marks the ticket claimed in one atomic store action while recording that the key has completed.\nCases: \nGuard: This request key has a remembered passing check for this ticket and has not already completed.\nCites: 63974e0ade6cd6f0572d2131ff59d8cbd7bb03bb4acc862f10d7d59fa91155f7, e6e7ce874d934a58362362f687db140e6c5ae5e76cced13b1e8c8bae75c68cf9"
+    },
+    {
+      "entry": "export-ticket/actions/return-receipt",
+      "pin": "1289eb21f419ab97dc2668baf53c30eae27a926665cd6f5e4c3d05cdef3b0a6a",
+      "content": "Actor: The export-ticket service that owns tickets, remembered checks and receipts (service, machine, -, -)\nSentence: In its one reply attempt for a request key, later than Complete, the service attempts to return that key's created receipt to the recipient, and a failed or lost reply leaves the stored receipt and claim intact.\nCases: \nGuard: This request key has completed, its created receipt is stored for this ticket, and its reply has not yet been attempted.\nCites: 63974e0ade6cd6f0572d2131ff59d8cbd7bb03bb4acc862f10d7d59fa91155f7, e3f8b2b2b6b3b3b25b531ce07cb121bd2e8fcbc5d84c678ef24d1f8b8e679362"
+    },
+    {
+      "entry": "export-ticket/boundary/recipient",
+      "pin": "1bc8bb0925adf07d9aa51749c0ed12112b418222e7dfc3db0dca07889021dd79",
+      "content": "Names: The already-authorized recipient at the request and reply seam\nKind: actor\nSide: world\nSeam: request-response\nIsolation: -\nReads: -\nWrites: -\nCites: 63974e0ade6cd6f0572d2131ff59d8cbd7bb03bb4acc862f10d7d59fa91155f7, e3f8b2b2b6b3b3b25b531ce07cb121bd2e8fcbc5d84c678ef24d1f8b8e679362, e6e7ce874d934a58362362f687db140e6c5ae5e76cced13b1e8c8bae75c68cf9"
+    }
+  ],
+  "established": "2026-11-12T03:52:18.865Z",
+  "previous": null,
+  "digest": "45802d8abc6f751a69ff6c1e70c5bf1afacc6b97182a29ed60d4213c987b2f80"
+}

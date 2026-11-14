@@ -1,0 +1,2 @@
+.tag { font-size: 10px; line-height: 1; border: 1px solid var(--blue-3); border-radius: 3px; padding: 0.12rem 0.3rem; color: var(--blue-7); white-space: nowrap; }
+.diff { color: var(--red); border-color: var(--red); }

@@ -1,0 +1,81 @@
+{
+  "name": "stock-to-cash/spans/stock-and-orders/claims/exclusive-cartons/base.ddfdfd789339",
+  "kind": "base",
+  "expected": {
+    "outcome": "no violation"
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "path": "models/stock-to-cash/spans/stock-and-orders/claims/exclusive-cartons/encoding.tla",
+        "sha256": "a04965d3793267b10a1977be2e681a2523326ad3eb7eb2afde8372fe2183da45"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "9458da856fdc997b4a698cfb8ddea5eca394d940b91f73ed01174e8ff033f8d4"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "194166964af216bb50eb78d9f11d1fce380d08db7a28ecbf00c7e6024750ef0b"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "stock-and-orders/claims/exclusive-cartons",
+        "pin": "a6ee9871c34d3d6ea8da1d753e0f5b9a4e30d9353baeeee120d331198afe96d3"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "no violation"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1082490,
+    "states": 1135291,
+    "depth": 24
+  },
+  "flags": [],
+  "established": "2026-11-14T02:19:15.620Z",
+  "previous": null,
+  "digest": "836e854f9e07739c7f55d1c1b01b3953f4da585edb49beba489909789d62feb8"
+}

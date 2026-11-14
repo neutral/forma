@@ -1,0 +1,72 @@
+{
+  "name": "export-ticket-tlc/actions/export-ticket/complete.344f2c25ca7a",
+  "kind": "enabled",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 300,
+    "megabytes": 2048
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "4f09199d60faf474bbe8b61daa62c807c8c0fff29f32d4f9c804347ea121dc8d"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "795db785038e2b0b55dfedea6524cf84424fafee44d94726315b3efa19eadd0f"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "77bbc8b7a83f8b94498af17ee8486da620dc86fbf3904c212e74a3826dd1a7a4"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "cfca73221577aacf7db15c7b0de0f3490ef2b5a8a26642f807101fde5752fad1"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/check",
+        "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9"
+      },
+      {
+        "entry": "export-ticket/actions/complete",
+        "pin": "65a9f50a3fa79df8d3e61828d85e92098cbe0df8cc81d2eca5eea3edc98ddc1d"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "d84a4e03d3bb"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1492,
+    "states": 2,
+    "depth": 2
+  },
+  "flags": [],
+  "established": "2026-11-12T03:51:55.874Z",
+  "previous": null,
+  "digest": "eeb5ea0091217af6491c3b7e4cb7da8a7e1be9f82eac08b89dec40164ec5d12d"
+}

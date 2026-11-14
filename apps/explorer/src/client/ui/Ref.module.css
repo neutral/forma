@@ -1,0 +1,6 @@
+.ref { all: unset; cursor: pointer; text-decoration: underline; text-decoration-color: var(--blue-3); text-underline-offset: 3px; border-radius: 2px; }
+.ref[data-hovered] { text-decoration-color: var(--blue-7); }
+.ref[aria-expanded='true'] { background: var(--blue-1); text-decoration: none; box-shadow: 0 0 0 2px var(--blue-1); }
+.ref[data-focus-visible] { outline: 2px solid var(--blue-7); outline-offset: 2px; }
+.again { color: var(--blue-5); }
+.detail { color: var(--blue-5); }

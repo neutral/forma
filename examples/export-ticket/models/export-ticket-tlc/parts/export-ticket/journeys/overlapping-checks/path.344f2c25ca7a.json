@@ -1,0 +1,77 @@
+{
+  "name": "export-ticket-tlc/parts/export-ticket/journeys/overlapping-checks/path.344f2c25ca7a",
+  "kind": "path",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 300,
+    "megabytes": 2048
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "4f09199d60faf474bbe8b61daa62c807c8c0fff29f32d4f9c804347ea121dc8d"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "795db785038e2b0b55dfedea6524cf84424fafee44d94726315b3efa19eadd0f"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/journeys/overlapping-checks/schedule.md",
+        "sha256": "29b1d8dc73cf44f67af599a1a3212bbf9b156b6f8ac50d2086b2fb63519b8d9d"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "c6a0442cfcb7c0d375d6b837a65a1c8720839334924c1215a42786384e151d47"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "a97338f4b51b67b5110a4b993be0cda4b3dfda055ab517de9475099f0ae5bbe5"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/check",
+        "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9"
+      },
+      {
+        "entry": "export-ticket/journeys/overlapping-checks",
+        "pin": "610ad8e700a5de0b2260bb1c33bc9821ea2e3deb5d9c79b494d1c2c643b1d21c"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "d84a4e03d3bb"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1191,
+    "states": 3,
+    "depth": 3
+  },
+  "flags": [],
+  "cases": [],
+  "established": "2026-11-12T03:52:00.158Z",
+  "previous": null,
+  "digest": "4137cf09100c2f2a96931d11a1ec9e9b204b7f22499dd1a2d74950a8263409bc"
+}

@@ -1,0 +1,10 @@
+/* What the developer wrote: proportional, in the developer's ink. */
+.prose { padding: 0.2rem 0 1rem; }
+.prose :global(h1) { font-size: 1.7rem; line-height: 1.2; font-weight: 650; margin: 0.6rem 0 0.8rem; letter-spacing: -0.015em; }
+.prose :global(h2) { font-size: 1.2rem; font-weight: 650; margin: 1.2rem 0 0.5rem; letter-spacing: -0.005em; }
+.prose :global(h3) { font-size: 1.05rem; margin: 1rem 0 0.4rem; }
+.prose :global(p) { margin: 0 0 0.85rem; }
+.prose :global(ol), .prose :global(ul) { margin: 0 0 0.85rem; padding-left: 1.4rem; }
+.prose :global(a) { color: inherit; text-underline-offset: 3px; }
+.prose :global(a:focus-visible) { outline: 2px solid var(--blue-7); outline-offset: 2px; }
+.prose :global(code) { font: 0.88em var(--mono); background: var(--blue-0); padding: 0.05rem 0.25rem; border-radius: 2px; }

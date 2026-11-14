@@ -1,0 +1,82 @@
+{
+  "name": "export-ticket-tlc/parts/export-ticket/journeys/no-check-after-receipt/refusal-at-3.344f2c25ca7a",
+  "kind": "refusal",
+  "expected": {
+    "outcome": "not enabled",
+    "step": 3
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 300,
+    "megabytes": 2048
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "4f09199d60faf474bbe8b61daa62c807c8c0fff29f32d4f9c804347ea121dc8d"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "795db785038e2b0b55dfedea6524cf84424fafee44d94726315b3efa19eadd0f"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/journeys/no-check-after-receipt/schedule.md",
+        "sha256": "943ae72017e85a368179b1fb59329591078362db3daffe5322cea195bc2e9d42"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "42c22eac27879db7f85bbfb44affe27c1a2f70ca4b17245bc003c570686bf5b3"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "16575bb3ef22907ebe13d36ec26e994aa52959db4ad1070724917763904c244a"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/check",
+        "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9"
+      },
+      {
+        "entry": "export-ticket/actions/complete",
+        "pin": "65a9f50a3fa79df8d3e61828d85e92098cbe0df8cc81d2eca5eea3edc98ddc1d"
+      },
+      {
+        "entry": "export-ticket/journeys/no-check-after-receipt",
+        "pin": "396d602cea9fa29b5a0e80f3a85f8ff1b5e04afc489d0f5593aa7b11b01b8e68"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "d84a4e03d3bb"
+    }
+  },
+  "found": {
+    "outcome": "not enabled"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1363,
+    "states": 3,
+    "depth": 3
+  },
+  "flags": [],
+  "cases": [],
+  "established": "2026-11-12T03:51:57.432Z",
+  "previous": null,
+  "digest": "9e66cb9b9faafd4da11752a12908fc91325287c003a59a409e67256b2d7de66e"
+}

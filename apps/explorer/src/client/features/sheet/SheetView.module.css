@@ -1,0 +1,8 @@
+/* the sheet: one border line, with the title block in its corner */
+.sheet { max-width: 74rem; margin: 1.6rem auto 4rem; padding: 0 var(--gutter) 3.5rem; border: 1px solid var(--blue-7); }
+@media (max-width: 64rem) {
+  .sheet { margin: 0.6rem; }
+}
+@media print {
+  .sheet { border: 0; }
+}

@@ -1,0 +1,89 @@
+{
+  "name": "export-ticket-tlc/parts/export-ticket/claims/retrieval-is-read/fault-wrong-read-identity.344f2c25ca7a",
+  "kind": "fault",
+  "expected": {
+    "outcome": "caught"
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 300,
+    "megabytes": 2048
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "4f09199d60faf474bbe8b61daa62c807c8c0fff29f32d4f9c804347ea121dc8d"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "795db785038e2b0b55dfedea6524cf84424fafee44d94726315b3efa19eadd0f"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/claims/retrieval-is-read/encoding.tla",
+        "sha256": "586b432d0f20e8de9d53c66dfc3a9376eafbfd779c12a06b446bcb746f7ca8ba"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/claims/retrieval-is-read/fault-wrong-read-identity.md",
+        "sha256": "1219d2a229ac1772869e1171491bdaba97bf5d1e51434345687601da74fda3ab"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "9a56c849750c31abd895a8506da827b6cf6f17c06406baed6f7b8310bf353bbb"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "bd3a3c0058bd4c7b5829c1eed8290688389140ff5e043048f68d84a94d6f66f6"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/check",
+        "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9"
+      },
+      {
+        "entry": "export-ticket/actions/complete",
+        "pin": "65a9f50a3fa79df8d3e61828d85e92098cbe0df8cc81d2eca5eea3edc98ddc1d"
+      },
+      {
+        "entry": "export-ticket/actions/fetch-receipt",
+        "pin": "b92587f7815fb06ca66e72b813e9f62896eb435e315e71aba59b1de342c6a4bb"
+      },
+      {
+        "entry": "export-ticket/claims/retrieval-is-read",
+        "pin": "f3916c4f88ec325966abb66ba11cb856771840513543e2914694da8248784986"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "d84a4e03d3bb"
+    }
+  },
+  "found": {
+    "outcome": "violation",
+    "property": "Property"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1107,
+    "states": 165,
+    "depth": 4
+  },
+  "flags": [],
+  "established": "2026-11-12T03:52:17.805Z",
+  "previous": null,
+  "digest": "b865e2217232c8dce33ffd63f624246b8ca542ea98e3a4f79bf401ecb6702823"
+}

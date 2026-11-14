@@ -1,0 +1,78 @@
+{
+  "name": "export-ticket-tlc/parts/export-ticket/journeys/no-unchecked-completion/path-to-0.344f2c25ca7a",
+  "kind": "path",
+  "expected": {
+    "outcome": "reached",
+    "step": 0
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 300,
+    "megabytes": 2048
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "4f09199d60faf474bbe8b61daa62c807c8c0fff29f32d4f9c804347ea121dc8d"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "795db785038e2b0b55dfedea6524cf84424fafee44d94726315b3efa19eadd0f"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/journeys/no-unchecked-completion/schedule.md",
+        "sha256": "1b294d6bf526cc809fe553df7e09eeac7195c9e0652c43c43908082eccb1c5f9"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "c6a0442cfcb7c0d375d6b837a65a1c8720839334924c1215a42786384e151d47"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "9537dc7d045a1f793f5ef1decfb66e6b40ebab7430a5bd9634af399afedca928"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/complete",
+        "pin": "65a9f50a3fa79df8d3e61828d85e92098cbe0df8cc81d2eca5eea3edc98ddc1d"
+      },
+      {
+        "entry": "export-ticket/journeys/no-unchecked-completion",
+        "pin": "279f036e0ac156ed96ba99e19164ec84eb54bba4e8bcda93bac3db6be80c7901"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "d84a4e03d3bb"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1168,
+    "states": null,
+    "depth": null
+  },
+  "flags": [],
+  "cases": [],
+  "established": "2026-11-12T03:51:58.788Z",
+  "previous": null,
+  "digest": "91abb9f6bd0ef23ec82c8e1f683ccef02f80f62950adeba7db8944f5c47e73cc"
+}

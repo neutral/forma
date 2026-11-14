@@ -1,0 +1,6 @@
+.player { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin: 0.3rem 0 0.4rem; font-size: 11px; }
+.button { all: unset; cursor: pointer; padding: 0.04rem 0.45rem; border: 1px solid var(--blue-7); border-radius: 3px; color: var(--blue-7); background: var(--paper); }
+.button[data-hovered] { color: var(--paper); background: var(--blue-7); }
+.button[data-focus-visible] { outline: 2px solid var(--blue-7); outline-offset: 2px; }
+.button[data-disabled] { cursor: default; color: var(--blue-5); border-color: var(--blue-3); background: var(--paper); }
+.at { margin-left: 0.3rem; color: var(--blue-5); }

@@ -1,0 +1,68 @@
+{
+  "name": "export-ticket-tlc/world/export-ticket/recipient/crash.enabled.f678ee6d8285",
+  "kind": "enabled",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\", \"r-a-retry\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 1800,
+    "megabytes": 8192
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "8d9558566338431abc81c88d9c0da8069554362a18bf3cf1cc4a3ce3852810ed"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "85c363bd8370993443859c077315e8fda45caf516bb739669e8d5e435c4694da"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "4de395f065d79750cefe91e21fad554538a440d2a383b16349836b45ba99d7b8"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "364e8efe43fc19131617f9c86b3bf6069fd3991ab2aac2f4aae352398b72b54b"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/boundary/recipient",
+        "pin": "1bc8bb0925adf07d9aa51749c0ed12112b418222e7dfc3db0dca07889021dd79"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1439,
+    "states": null,
+    "depth": null
+  },
+  "flags": [],
+  "established": "2026-11-13T12:23:53.817Z",
+  "previous": null,
+  "digest": "c2b4d60e1dd15d37e2a7aa71c4ffc45eb649b15101c5b0631395f1fb767b6b4d"
+}

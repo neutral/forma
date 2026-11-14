@@ -1,0 +1,134 @@
+{
+  "name": "export-ticket-tlc/parts/export-ticket/claims/no-creation-after-expiry/witness-pending-at-expiry.344f2c25ca7a",
+  "kind": "witness",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 300,
+    "megabytes": 2048
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "4f09199d60faf474bbe8b61daa62c807c8c0fff29f32d4f9c804347ea121dc8d"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "795db785038e2b0b55dfedea6524cf84424fafee44d94726315b3efa19eadd0f"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/claims/no-creation-after-expiry/witness-pending-at-expiry.md",
+        "sha256": "e0e651a3726e74031587c5daba9e87dbe32f1eb8fa0f7da21953ea8dda9e4271"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "931e2b1c72bb5c0b3bf1c1f324f94a690e8c1d2d5641817114c5823f314903ef"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "898c5e4ccc8f1267e769de5389ed638c1eae00662d10aea7813f313f412f0d2e"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/check",
+        "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9"
+      },
+      {
+        "entry": "export-ticket/actions/expire",
+        "pin": "c65d1c23ef540315d12823ff2bcdbbd353d53f0a845775a5ca8593bad7476a9f"
+      },
+      {
+        "entry": "export-ticket/claims/no-creation-after-expiry",
+        "pin": "d16eb1efb779b0a6b7794d3e9da0d5e3805e9e34d4afdc9d2fbf0fa03bf163a6"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "d84a4e03d3bb"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1197,
+    "states": 18,
+    "depth": 3
+  },
+  "flags": [],
+  "trace": {
+    "states": [
+      {
+        "phases": {
+          "export-ticket/ticket-state": {
+            "\"t\"": "active-unclaimed"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "export-ticket/check",
+            "bindings": {
+              "t": "\"t\"",
+              "k": "\"a\""
+            }
+          }
+        ],
+        "phases": {
+          "export-ticket/ticket-state": {
+            "\"t\"": "active-unclaimed"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "export-ticket/expire",
+            "bindings": {
+              "t": "\"t\""
+            }
+          }
+        ],
+        "phases": {
+          "export-ticket/ticket-state": {
+            "\"t\"": "expired-unclaimed"
+          }
+        }
+      }
+    ]
+  },
+  "rendered": [
+    {
+      "entry": "export-ticket/actions/check",
+      "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9",
+      "content": "Actor: The export-ticket service that owns tickets, remembered checks and receipts (service, machine, -, -)\nSentence: The service checks an active ticket with no receipt and remembers that this request key passed without claiming the ticket or creating a receipt.\nCases: \nGuard: This request key has not previously been checked or completed for this ticket.\nCites: 63974e0ade6cd6f0572d2131ff59d8cbd7bb03bb4acc862f10d7d59fa91155f7"
+    },
+    {
+      "entry": "export-ticket/actions/expire",
+      "pin": "c65d1c23ef540315d12823ff2bcdbbd353d53f0a845775a5ca8593bad7476a9f",
+      "content": "Actor: The export-ticket service that owns tickets, remembered checks and receipts (service, machine, -, -)\nSentence: The explicit expiry event changes an active ticket to expired independently of pending checks or completed claims and preserves remembered checks, receipts and the export, with no transition back to active.\nCases: \nGuard: none\nCites: 63974e0ade6cd6f0572d2131ff59d8cbd7bb03bb4acc862f10d7d59fa91155f7, e6e7ce874d934a58362362f687db140e6c5ae5e76cced13b1e8c8bae75c68cf9"
+    }
+  ],
+  "established": "2026-11-12T03:52:18.761Z",
+  "previous": null,
+  "digest": "ebbaa6fe3508328383b82408c7e0cd53f2697b2eabe1030a0ecd7aa32a0f9ae1"
+}

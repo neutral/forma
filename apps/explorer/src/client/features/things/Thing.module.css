@@ -1,0 +1,16 @@
+/* an opened thing: a pale wash and a line down its left; one inside another returns to paper */
+.thing { --bg: var(--blue-1); font-size: 12.5px; line-height: 1.6; background: var(--blue-1); border-left: 2px solid var(--blue-7); padding: 0.8rem 1rem 0.9rem; margin: 0.4rem 0 1.2rem; scroll-margin-top: 0.8rem; }
+.thing .thing { --bg: var(--paper); background: var(--paper); margin: 0.6rem 0 0.2rem; }
+.thing .thing .thing { --bg: var(--blue-1); background: var(--blue-1); }
+.pending { border-left-style: dashed; }
+.revision { border-left-color: var(--red); }
+.quiet { border-left-color: var(--blue-5); }
+
+.header { display: flex; align-items: baseline; gap: 0.7rem; flex-wrap: wrap; }
+.title { font-size: 13.5px; margin: 0; font-weight: 600; flex: 1 1 20rem; }
+.standing { font-size: 11.5px; white-space: nowrap; }
+.close { all: unset; cursor: pointer; color: var(--blue-5); font-size: 11px; text-decoration: underline; text-underline-offset: 2px; padding: 0 0.2rem; border-radius: 2px; }
+.close[data-hovered] { color: var(--blue-9); }
+.close[data-focus-visible] { outline: 2px solid var(--blue-7); outline-offset: 2px; }
+
+.where { font-size: 11px; color: var(--blue-5); margin: 0.15rem 0 0.5rem; }

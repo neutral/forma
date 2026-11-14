@@ -1,0 +1,89 @@
+{
+  "name": "export-ticket-tlc/parts/export-ticket/claims/no-creation-after-expiry/fault-unchecked-expiry.344f2c25ca7a",
+  "kind": "fault",
+  "expected": {
+    "outcome": "caught"
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 300,
+    "megabytes": 2048
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "4f09199d60faf474bbe8b61daa62c807c8c0fff29f32d4f9c804347ea121dc8d"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "795db785038e2b0b55dfedea6524cf84424fafee44d94726315b3efa19eadd0f"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/claims/no-creation-after-expiry/encoding.tla",
+        "sha256": "f0dc94f5841b7b8712b7c2b236c7140e110a690f442eb5604c0c4d0f5d008839"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/claims/no-creation-after-expiry/fault-unchecked-expiry.md",
+        "sha256": "951040dee9ab90a4118c020defd93000d3231100ea0d0995dc51109f1e04a08d"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "7e52bd9d47a7a1e725af819d58845fe97007bb380641b67d0730b61c5e478ff0"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "00b098deb8d3db5f5e7d1fa4ed8ce7488acd412a967a1da929cd2cc9b2ed933e"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/check",
+        "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9"
+      },
+      {
+        "entry": "export-ticket/actions/complete",
+        "pin": "65a9f50a3fa79df8d3e61828d85e92098cbe0df8cc81d2eca5eea3edc98ddc1d"
+      },
+      {
+        "entry": "export-ticket/actions/expire",
+        "pin": "c65d1c23ef540315d12823ff2bcdbbd353d53f0a845775a5ca8593bad7476a9f"
+      },
+      {
+        "entry": "export-ticket/claims/no-creation-after-expiry",
+        "pin": "d16eb1efb779b0a6b7794d3e9da0d5e3805e9e34d4afdc9d2fbf0fa03bf163a6"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "d84a4e03d3bb"
+    }
+  },
+  "found": {
+    "outcome": "violation",
+    "property": "Invariant"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1117,
+    "states": 191,
+    "depth": 4
+  },
+  "flags": [],
+  "established": "2026-11-12T03:52:17.816Z",
+  "previous": null,
+  "digest": "3a25dfaf6ab3ad470882602e2ec37b93d62842fc8640148f3d99c1ce7d65a835"
+}

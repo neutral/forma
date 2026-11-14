@@ -1,0 +1,130 @@
+{
+  "name": "stock-to-cash/spans/stock-to-cash/journeys/hold-after-collection/path.ddfdfd789339",
+  "kind": "path",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "path": "models/stock-to-cash/spans/stock-to-cash/journeys/hold-after-collection/schedule.md",
+        "sha256": "6b3b2a2701d416452d5d0483740a7a5971abf5cd65d830baf47ea37df4d43066"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "f71b07841cbc26e2088e29a20153fb2cf17ab7e1ba228054341c57f240ca740d"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "b1057c2c5deb55621083bab6592bcd5ab45e1025f10437b5bd8f0db224e0a1ee"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "accounts/actions/issue-invoice",
+        "pin": "25d79331102414bdb9a35dc67d4672cf2ba7c25e71de0f34fe37e1bfb80f5b16"
+      },
+      {
+        "entry": "accounts/lifecycles/invoice",
+        "pin": "19e2ef8abe0a95df17a965a9f624d3ce2a5a8d1b35bb9e173713a3e2779cb7ab"
+      },
+      {
+        "entry": "orders/actions/collect-shipment",
+        "pin": "ffd0a8da6efbfeb315eab5cc6b43350b8fc1fc9ae1a2b00b4045c6ae96e6dfb4"
+      },
+      {
+        "entry": "orders/actions/confirm-order",
+        "pin": "c38b3ad9186861f3e09ce1acfe918680eb6b439eef7a2fe1f041b91a7aeff621"
+      },
+      {
+        "entry": "orders/actions/prepare-shipment",
+        "pin": "d59462d4deac8b42caeefc40a8afcc1c8febd07daacf3f0426510a309b190089"
+      },
+      {
+        "entry": "orders/actions/record-order",
+        "pin": "8065850002ac92f3bcf3ff4b1265726373a64e69a464ae91673fd5fa77a47561"
+      },
+      {
+        "entry": "orders/lifecycles/order",
+        "pin": "402901e0f2391041097b56375aeead380ca8ff09736118b5cdf7d7af2b41f8fc"
+      },
+      {
+        "entry": "orders/lifecycles/shipment",
+        "pin": "d4acb7113a9c3c1959dac3eb3cb0e1e3b8ec7586eec6dcc9c0b6f86f43453d89"
+      },
+      {
+        "entry": "stock-to-cash/journeys/hold-after-collection",
+        "pin": "58fa971d9f014933b32b66e8c5630ba572c1459bef5e3918e8d62143ccce71d2"
+      },
+      {
+        "entry": "stock/actions/hold-batch",
+        "pin": "8c7946c96bf86aa390b881622620704e8aedbe6860534b9c109b0b2240b890b3"
+      },
+      {
+        "entry": "stock/actions/receive-batch",
+        "pin": "75373cedf831cf406be1e23850082a1d63b50f6fefb39f67c052efa196c8fff4"
+      },
+      {
+        "entry": "stock/actions/release-batch",
+        "pin": "578cdb745b85ce1b14b7d2872c182c85796c769b17ea3f0a273e1b3f9310712a"
+      },
+      {
+        "entry": "stock/lifecycles/batch",
+        "pin": "4831e4b7971a4d5b8597c2c584476086af6153221a3ede61e80cd8fe2323b1a0"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1449,
+    "states": 85,
+    "depth": 9
+  },
+  "flags": [],
+  "cases": [],
+  "established": "2026-11-13T23:59:50.103Z",
+  "previous": null,
+  "digest": "a04472b255429ddcaab60140e898c615776ec2198716fcad8861aea0f23705a5"
+}

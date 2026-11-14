@@ -1,0 +1,8 @@
+.band { display: grid; grid-template-columns: 7.2rem minmax(0, 1fr); column-gap: 1rem; padding: 0.55rem 0; border-top: 1px solid var(--blue-3); }
+.cap { padding-top: 0.2rem; }
+.body p { margin: 0.3rem 0; }
+.body > :first-child { margin-top: 0; }
+.body > :last-child { margin-bottom: 0; }
+@media (max-width: 64rem) {
+  .band { grid-template-columns: 1fr; }
+}

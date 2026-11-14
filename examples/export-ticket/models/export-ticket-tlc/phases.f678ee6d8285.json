@@ -1,0 +1,68 @@
+{
+  "name": "export-ticket-tlc/phases.f678ee6d8285",
+  "kind": "phases",
+  "expected": {
+    "outcome": "no violation"
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\", \"r-a-retry\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 1800,
+    "megabytes": 8192
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "8d9558566338431abc81c88d9c0da8069554362a18bf3cf1cc4a3ce3852810ed"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "85c363bd8370993443859c077315e8fda45caf516bb739669e8d5e435c4694da"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "57a8205e75937c805b3fc3dd4ad51c5fa5c6fd3e69b882116c3bfa051a0c52a5"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "99caee8cf1916b5847f7b4eecc6f827744f95ee3eefd27289b02c4cf5e7aaebb"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/lifecycles/ticket-state",
+        "pin": "daf54ce69977c9d026e880d92004f77f09629c384820bf6f193476d3814574b9"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "unanswered",
+    "reason": "ran out of time: stopped after 1800 s"
+  },
+  "measures": {
+    "duration": 1800050,
+    "states": null,
+    "depth": 14
+  },
+  "flags": [],
+  "established": "2026-11-13T13:25:01.979Z",
+  "previous": null,
+  "digest": "3a9e756f6f4fc8a2bf775eff8f541af6b4d564d9449461b82ecb375cf5f7cfd3"
+}

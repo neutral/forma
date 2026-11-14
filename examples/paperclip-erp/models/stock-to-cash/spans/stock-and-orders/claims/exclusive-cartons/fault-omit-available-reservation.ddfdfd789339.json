@@ -1,0 +1,94 @@
+{
+  "name": "stock-to-cash/spans/stock-and-orders/claims/exclusive-cartons/fault-omit-available-reservation.ddfdfd789339",
+  "kind": "fault",
+  "expected": {
+    "outcome": "caught"
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "path": "models/stock-to-cash/spans/stock-and-orders/claims/exclusive-cartons/encoding.tla",
+        "sha256": "a04965d3793267b10a1977be2e681a2523326ad3eb7eb2afde8372fe2183da45"
+      },
+      {
+        "path": "models/stock-to-cash/spans/stock-and-orders/claims/exclusive-cartons/fault-omit-available-reservation.md",
+        "sha256": "cbde9f91f3e7606f417b16b56f691053b503d1b28c1c73e92a8bc9381045a308"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "9458da856fdc997b4a698cfb8ddea5eca394d940b91f73ed01174e8ff033f8d4"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "87afaf6f1f625c8678ed3f180eb3ed87a51235bb6b65f1dc6bd6c4af80ad95ef"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "orders/actions/confirm-order",
+        "pin": "c38b3ad9186861f3e09ce1acfe918680eb6b439eef7a2fe1f041b91a7aeff621"
+      },
+      {
+        "entry": "orders/actions/record-order",
+        "pin": "8065850002ac92f3bcf3ff4b1265726373a64e69a464ae91673fd5fa77a47561"
+      },
+      {
+        "entry": "stock-and-orders/claims/exclusive-cartons",
+        "pin": "a6ee9871c34d3d6ea8da1d753e0f5b9a4e30d9353baeeee120d331198afe96d3"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "violation",
+    "property": "Property"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1082,
+    "states": 159,
+    "depth": 3
+  },
+  "flags": [],
+  "established": "2026-11-14T02:19:32.402Z",
+  "previous": null,
+  "digest": "5760fbe5562c2a29e3e497336976baac8295fdca08478a3996e6c168d25e6840"
+}

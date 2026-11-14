@@ -1,0 +1,81 @@
+{
+  "name": "stock-to-cash/world/orders/sales/crash.enabled.ddfdfd789339",
+  "kind": "enabled",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "1def79b32df20e42af733f62dc60f5d30d75ed848122e4a3ce038b7f3895dcc3"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "c119d9d0bd3068706ab4db7464ae30720be22bd3d2943fa74ebc1f35bce9dfd5"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "orders/actions/record-order",
+        "pin": "8065850002ac92f3bcf3ff4b1265726373a64e69a464ae91673fd5fa77a47561"
+      },
+      {
+        "entry": "orders/boundary/sales",
+        "pin": "b8b4cfd82be0cb1184071621aaf4bcb284cdfe60125e222abb3c27c797b413ed"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1013,
+    "states": 43,
+    "depth": 2
+  },
+  "flags": [],
+  "established": "2026-11-14T00:28:46.874Z",
+  "previous": null,
+  "digest": "c1e6182bfdcbc8e7f0730f2a38df214f84468e99a6ba45b4261728ea71c75ea3"
+}

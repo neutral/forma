@@ -1,0 +1,123 @@
+{
+  "name": "stock-to-cash/parts/accounts/claims/receipts-once/fault-clamp-excessive-amount.ddfdfd789339.surprise-7856d007b00f",
+  "question": "stock-to-cash/parts/accounts/claims/receipts-once/fault-clamp-excessive-amount.ddfdfd789339",
+  "kind": "fault",
+  "expected": {
+    "outcome": "caught"
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "path": "models/stock-to-cash/parts/accounts/claims/receipts-once/encoding.tla",
+        "sha256": "1ace53e3b7aaa72acf6d0e222793b48ab721370b10a5ed84457ee8364496273e"
+      },
+      {
+        "path": "models/stock-to-cash/parts/accounts/claims/receipts-once/fault-clamp-excessive-amount.md",
+        "sha256": "d3371b786732f259d40482aa520ee5aeb44e2efcb6b9c21e6ec3015c2e1755d9"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "9458da856fdc997b4a698cfb8ddea5eca394d940b91f73ed01174e8ff033f8d4"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "c908ff647bd9ed64ed040ce597ee6995f64b69173766a01dee233583427b379f"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "accounts/actions/apply-receipt",
+        "pin": "ff1726325ace1bd5c7e657ab858de95006cddf18c646a8e588a157506812b364"
+      },
+      {
+        "entry": "accounts/claims/receipts-once",
+        "pin": "7f9dc93bc50bb052ec2f83badb30550592ae8220db0dfa24626d77a88c2806dc"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "held": [
+    {
+      "path": "models/stock-to-cash/StockToCash.tla",
+      "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+    },
+    {
+      "path": "models/stock-to-cash/model.md",
+      "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+    },
+    {
+      "path": "models/stock-to-cash/parts/accounts/claims/receipts-once/encoding.tla",
+      "sha256": "1ace53e3b7aaa72acf6d0e222793b48ab721370b10a5ed84457ee8364496273e"
+    },
+    {
+      "path": "models/stock-to-cash/parts/accounts/claims/receipts-once/fault-clamp-excessive-amount.md",
+      "sha256": "d3371b786732f259d40482aa520ee5aeb44e2efcb6b9c21e6ec3015c2e1755d9"
+    },
+    {
+      "path": "models/stock-to-cash/parts/accounts/claims/receipts-once/fault-omit-receipt-dedupe.md",
+      "sha256": "8cc4bd8782f112a7c9f63fca0cd68fb1045244304c6c9612bfb3d745bd52851b"
+    },
+    {
+      "path": "models/stock-to-cash/parts/accounts/claims/receipts-once/witness-partial-and-premature.md",
+      "sha256": "549bcf900893c33cc137ac8cad27c65b0c3b2c1b055cebac34fdc58a25083549"
+    },
+    {
+      "path": "models/stock-to-cash/parts/accounts/claims/receipts-once/witness-settled-in-two-receipts.md",
+      "sha256": "9e5caa439ac7d5d8371ab8efbaea3d69df37b7502de352046f84120a55cb7aff"
+    },
+    {
+      "path": "models/stock-to-cash/parts/accounts/claims/receipts-once/witness-settled-receipt-arrives-again.md",
+      "sha256": "af87950e27120c94dab95c952cd07b16c6ad86b6916873ff90dc9f377a12e0d8"
+    }
+  ],
+  "found": {
+    "outcome": "no violation"
+  },
+  "matches": false,
+  "measures": {
+    "duration": 2353838,
+    "states": 2304345,
+    "depth": 24
+  },
+  "flags": [],
+  "established": "2026-11-14T01:08:12.874Z",
+  "digest": "c0779ce47e8176327428fc58f2296aa7e655094459fd3648d734c6fd8c64c479"
+}

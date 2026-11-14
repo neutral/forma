@@ -1,0 +1,76 @@
+{
+  "name": "export-ticket-tlc/actions/export-ticket/return-receipt.f678ee6d8285",
+  "kind": "enabled",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\", \"r-a-retry\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 1800,
+    "megabytes": 8192
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "8d9558566338431abc81c88d9c0da8069554362a18bf3cf1cc4a3ce3852810ed"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "85c363bd8370993443859c077315e8fda45caf516bb739669e8d5e435c4694da"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "4de395f065d79750cefe91e21fad554538a440d2a383b16349836b45ba99d7b8"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "07f2cd7049010ba9927661f979e06daf9ccd163ed1389d5e71a20e0b000878b4"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/check",
+        "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9"
+      },
+      {
+        "entry": "export-ticket/actions/complete",
+        "pin": "65a9f50a3fa79df8d3e61828d85e92098cbe0df8cc81d2eca5eea3edc98ddc1d"
+      },
+      {
+        "entry": "export-ticket/actions/return-receipt",
+        "pin": "1289eb21f419ab97dc2668baf53c30eae27a926665cd6f5e4c3d05cdef3b0a6a"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1604,
+    "states": 27,
+    "depth": 3
+  },
+  "flags": [],
+  "established": "2026-11-13T12:23:43.948Z",
+  "previous": null,
+  "digest": "55abc9390357d467316a58fd0876bb7fdf1d64c5000797f7643340a748321115"
+}

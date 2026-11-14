@@ -1,0 +1,283 @@
+{
+  "name": "stock-to-cash/spans/orders-and-accounts/claims/credit-limit/witness-last-credit-committed.ddfdfd789339",
+  "kind": "witness",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "path": "models/stock-to-cash/spans/orders-and-accounts/claims/credit-limit/witness-last-credit-committed.md",
+        "sha256": "b0361bdc169bb253d5a2c0ac208b366712ace739800d4688cea4e9f69f20fc93"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "c05c265b3a8c2e52d455eaa4ec870d834f52fc2ffc886c55ffef81a404f61e28"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "694d2b37227592279cd8f66e99f546c65afa879ec0fa3bcbe95a3414da9c7174"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "orders-and-accounts/claims/credit-limit",
+        "pin": "3ac0d7df92c0228d8fcbabfd9b55d428358965f24157cc1e4c8a25f3510ab6f5"
+      },
+      {
+        "entry": "orders/actions/confirm-order",
+        "pin": "c38b3ad9186861f3e09ce1acfe918680eb6b439eef7a2fe1f041b91a7aeff621"
+      },
+      {
+        "entry": "orders/actions/record-order",
+        "pin": "8065850002ac92f3bcf3ff4b1265726373a64e69a464ae91673fd5fa77a47561"
+      },
+      {
+        "entry": "stock/actions/receive-batch",
+        "pin": "75373cedf831cf406be1e23850082a1d63b50f6fefb39f67c052efa196c8fff4"
+      },
+      {
+        "entry": "stock/actions/release-batch",
+        "pin": "578cdb745b85ce1b14b7d2872c182c85796c769b17ea3f0a273e1b3f9310712a"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1753,
+    "states": 2817,
+    "depth": 6
+  },
+  "flags": [],
+  "trace": {
+    "states": [
+      {
+        "phases": {
+          "accounts/invoice": {
+            "1": "unissued",
+            "2": "unissued"
+          },
+          "orders/order": {
+            "1": "unrecorded",
+            "2": "unrecorded"
+          },
+          "orders/shipment": {
+            "1": "unprepared",
+            "2": "unprepared"
+          },
+          "stock/batch": {
+            "1": "unrecorded",
+            "2": "unrecorded"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "stock/receive-batch",
+            "bindings": {
+              "request": "<<1, 1..4, 4>>"
+            }
+          }
+        ],
+        "phases": {
+          "accounts/invoice": {
+            "1": "unissued",
+            "2": "unissued"
+          },
+          "orders/order": {
+            "1": "unrecorded",
+            "2": "unrecorded"
+          },
+          "orders/shipment": {
+            "1": "unprepared",
+            "2": "unprepared"
+          },
+          "stock/batch": {
+            "1": "held",
+            "2": "unrecorded"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "stock/release-batch",
+            "bindings": {
+              "request": "<<1, 1, 0, TRUE>>"
+            }
+          }
+        ],
+        "phases": {
+          "accounts/invoice": {
+            "1": "unissued",
+            "2": "unissued"
+          },
+          "orders/order": {
+            "1": "unrecorded",
+            "2": "unrecorded"
+          },
+          "orders/shipment": {
+            "1": "unprepared",
+            "2": "unprepared"
+          },
+          "stock/batch": {
+            "1": "released",
+            "2": "unrecorded"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "orders/record-order",
+            "bindings": {
+              "request": "<<1, 1, 2>>"
+            }
+          }
+        ],
+        "phases": {
+          "accounts/invoice": {
+            "1": "unissued",
+            "2": "unissued"
+          },
+          "orders/order": {
+            "1": "draft",
+            "2": "unrecorded"
+          },
+          "orders/shipment": {
+            "1": "unprepared",
+            "2": "unprepared"
+          },
+          "stock/batch": {
+            "1": "released",
+            "2": "unrecorded"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "orders/record-order",
+            "bindings": {
+              "request": "<<2, 1, 2>>"
+            }
+          }
+        ],
+        "phases": {
+          "accounts/invoice": {
+            "1": "unissued",
+            "2": "unissued"
+          },
+          "orders/order": {
+            "1": "draft",
+            "2": "draft"
+          },
+          "orders/shipment": {
+            "1": "unprepared",
+            "2": "unprepared"
+          },
+          "stock/batch": {
+            "1": "released",
+            "2": "unrecorded"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "orders/confirm-order",
+            "bindings": {
+              "request": "<<1, 1, 2, {1, 2}>>"
+            }
+          }
+        ],
+        "phases": {
+          "accounts/invoice": {
+            "1": "unissued",
+            "2": "unissued"
+          },
+          "orders/order": {
+            "1": "open",
+            "2": "draft"
+          },
+          "orders/shipment": {
+            "1": "unprepared",
+            "2": "unprepared"
+          },
+          "stock/batch": {
+            "1": "released",
+            "2": "unrecorded"
+          }
+        }
+      }
+    ]
+  },
+  "rendered": [
+    {
+      "entry": "orders/actions/confirm-order",
+      "pin": "c38b3ad9186861f3e09ce1acfe918680eb6b439eef7a2fe1f041b91a7aeff621",
+      "content": "Actor: Sales representatives recording and confirming customer orders through the application (actor, world, person, -)\nSentence: A first successful confirmation reserves the order quantity of particular available cartons and commits its full value together, fixes customer and quantity, and remembers the result; an exact replay returns that result without changing current stock, exposure or order state.\nCases: new, replay\nGuard: For new, the draft has enough released on-hand unreserved cartons and adding its full quantity times £10 to current exposure does not exceed its customer limit; for replay, the order has a successful confirmation with identical contents.\nCites: 0838ae3f97618d716f9209d696760b2cb85efb9a8ba93156cae711808d5135bb, 33ad4d4805526390816ea74605ad3e7bbdeabf5c217fd0605d44017e47768112, a94561bd829c5ef3a2b0a62c065dba2651c9eec5e72ae308ae916860f41a90da"
+    },
+    {
+      "entry": "orders/actions/record-order",
+      "pin": "8065850002ac92f3bcf3ff4b1265726373a64e69a464ae91673fd5fa77a47561",
+      "content": "Actor: Sales representatives recording and confirming customer orders through the application (actor, world, person, -)\nSentence: Record a draft for one customer and a positive whole number of cartons without reserving stock or credit, or return the same recorded order unchanged for an exact replay.\nCases: \nGuard: The customer has its fixed credit limit set before ordering, the quantity is positive and integral, and the order identity is unused or its successful original contents match exactly.\nCites: 0838ae3f97618d716f9209d696760b2cb85efb9a8ba93156cae711808d5135bb, 7320a7366cca9dfba00772f5b64c9b02380224ac9fd1b2053052f24799895789, f5a3ec77f1047ec587a7b4de6105626c9f346adfd64137b721e11fdadab881f3, fe95e69b81721f0fd01ae76026658ff2d320854b7f304dfcbef2d00dfdd7daaa"
+    },
+    {
+      "entry": "stock/actions/receive-batch",
+      "pin": "75373cedf831cf406be1e23850082a1d63b50f6fefb39f67c052efa196c8fff4",
+      "content": "Actor: Warehouse staff recording finished batches and preparing scanned shipments through the application (actor, world, person, -)\nSentence: Record one completed batch and its distinct carton identities on hold in one commit, or return its successful recorded receipt unchanged on an exact replay without resetting quality or adding cartons.\nCases: \nGuard: The batch identity is new and its quantity equals its distinct carton identities, none previously recorded; or the successful batch identity is replayed with exactly its original contents.\nCites: 0838ae3f97618d716f9209d696760b2cb85efb9a8ba93156cae711808d5135bb, bb73df1b3320915b4c937ee5c560386fc37c9bb0ff0260e6cf3e2c80829e59d4, f5a3ec77f1047ec587a7b4de6105626c9f346adfd64137b721e11fdadab881f3"
+    },
+    {
+      "entry": "stock/actions/release-batch",
+      "pin": "578cdb745b85ce1b14b7d2872c182c85796c769b17ea3f0a273e1b3f9310712a",
+      "content": "Actor: Quality assurance staff making revision-checked hold and release decisions (actor, world, person, -)\nSentence: A fresh QA release changes the held batch to released and increments its quality revision in one commit; an exact replay of a successful release returns its recorded result and leaves the current quality and revision unchanged.\nCases: new, replay\nGuard: For new, inspection is complete and the unused operation identity names the current quality revision; for replay, the operation identity and every supplied field match a successful release, regardless of intervening decisions.\nCites: 0838ae3f97618d716f9209d696760b2cb85efb9a8ba93156cae711808d5135bb, b696daefa4be3eaa05a3bc6091774dcf265a234c72b4151e4f97ad23b38cc2ce, bb73df1b3320915b4c937ee5c560386fc37c9bb0ff0260e6cf3e2c80829e59d4"
+    }
+  ],
+  "established": "2026-11-14T01:25:46.293Z",
+  "previous": null,
+  "digest": "07ce4469ddc8c19297193d1d09063656af59e21bf533cf683463ac4ce4903454"
+}

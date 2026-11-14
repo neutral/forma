@@ -1,0 +1,81 @@
+{
+  "name": "stock-to-cash/spans/orders-and-accounts/claims/exposure-conservation/base.ddfdfd789339",
+  "kind": "base",
+  "expected": {
+    "outcome": "no violation"
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "path": "models/stock-to-cash/spans/orders-and-accounts/claims/exposure-conservation/encoding.tla",
+        "sha256": "590205799fec33c9ec259b5484b77b0675bb83a8bcbbbad1e330b52495087e56"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "9458da856fdc997b4a698cfb8ddea5eca394d940b91f73ed01174e8ff033f8d4"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "b81cc46c5037a03b5ae95ee291e07c05e984fb7b336d66d5e9e724b8036f2779"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "orders-and-accounts/claims/exposure-conservation",
+        "pin": "23f92fd6ca122e8519f6e6b72a6875eb24d22799d64fc6deaa557ae86a953808"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "no violation"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1080745,
+    "states": 1135291,
+    "depth": 24
+  },
+  "flags": [],
+  "established": "2026-11-14T02:01:12.729Z",
+  "previous": null,
+  "digest": "42c64d85f13b05a16e9d27fe2a6cb01f0e5ba19da90847d778406e039b341074"
+}

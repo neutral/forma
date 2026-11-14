@@ -1,0 +1,81 @@
+{
+  "name": "stock-to-cash/parts/accounts/claims/receipts-once/base.ddfdfd789339",
+  "kind": "base",
+  "expected": {
+    "outcome": "no violation"
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "path": "models/stock-to-cash/parts/accounts/claims/receipts-once/encoding.tla",
+        "sha256": "1ace53e3b7aaa72acf6d0e222793b48ab721370b10a5ed84457ee8364496273e"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "9458da856fdc997b4a698cfb8ddea5eca394d940b91f73ed01174e8ff033f8d4"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "7d54e5d00035dfb62ef64f0809586d6ffd4e8de59294f3fe5eac5f7f4a4300df"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "accounts/claims/receipts-once",
+        "pin": "7f9dc93bc50bb052ec2f83badb30550592ae8220db0dfa24626d77a88c2806dc"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "no violation"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1096854,
+    "states": 1135291,
+    "depth": 24
+  },
+  "flags": [],
+  "established": "2026-11-14T00:47:15.889Z",
+  "previous": null,
+  "digest": "f851ee3d061fc3709d7bcaff05dc4c79bc58c5935701a5b1f280e987452737e1"
+}

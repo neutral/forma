@@ -1,0 +1,7 @@
+.fold { margin: 0.35rem 0; }
+.summary { all: unset; cursor: pointer; color: var(--blue-7); font-size: 12px; border-radius: 2px; }
+.summary::before { content: '▶'; display: inline-block; width: 1.45em; font-size: 0.75em; }
+.fold[data-expanded] > .summary::before { content: '▼'; }
+.summary[data-hovered] { color: var(--blue-9); }
+.summary[data-focus-visible] { outline: 2px solid var(--blue-7); outline-offset: 2px; }
+.small { font-size: 11px; }

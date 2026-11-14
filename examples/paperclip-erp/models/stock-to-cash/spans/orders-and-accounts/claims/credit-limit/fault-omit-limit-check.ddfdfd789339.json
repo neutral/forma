@@ -1,0 +1,102 @@
+{
+  "name": "stock-to-cash/spans/orders-and-accounts/claims/credit-limit/fault-omit-limit-check.ddfdfd789339",
+  "kind": "fault",
+  "expected": {
+    "outcome": "caught"
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "path": "models/stock-to-cash/spans/orders-and-accounts/claims/credit-limit/encoding.tla",
+        "sha256": "981fe0331fd45d3ff3d967587ae2ffc1487d78d81fb4f02ea329b0539d62b75e"
+      },
+      {
+        "path": "models/stock-to-cash/spans/orders-and-accounts/claims/credit-limit/fault-omit-limit-check.md",
+        "sha256": "846cb1f0e55f43fa6460e6c17953d2af57bab729c099daac0a23565bfa93a0ba"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "eb9b3d34c785358f4ec3fd6cbcb22d1e76ddd0f7d55821ba4300904cb718c8be"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "db6878dca470ab54b8d9c12af5032fd1a120534bf28b0065b94b70171ea630bb"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "orders-and-accounts/claims/credit-limit",
+        "pin": "3ac0d7df92c0228d8fcbabfd9b55d428358965f24157cc1e4c8a25f3510ab6f5"
+      },
+      {
+        "entry": "orders/actions/confirm-order",
+        "pin": "c38b3ad9186861f3e09ce1acfe918680eb6b439eef7a2fe1f041b91a7aeff621"
+      },
+      {
+        "entry": "orders/actions/record-order",
+        "pin": "8065850002ac92f3bcf3ff4b1265726373a64e69a464ae91673fd5fa77a47561"
+      },
+      {
+        "entry": "stock/actions/receive-batch",
+        "pin": "75373cedf831cf406be1e23850082a1d63b50f6fefb39f67c052efa196c8fff4"
+      },
+      {
+        "entry": "stock/actions/release-batch",
+        "pin": "578cdb745b85ce1b14b7d2872c182c85796c769b17ea3f0a273e1b3f9310712a"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "violation",
+    "property": "Invariant"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1595,
+    "states": 2640,
+    "depth": 5
+  },
+  "flags": [],
+  "established": "2026-11-14T01:08:14.952Z",
+  "previous": null,
+  "digest": "cf7822888847c0c8251874c720de5b6ed89c1bd349c9d21bca4072f163b985d0"
+}

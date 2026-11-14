@@ -1,0 +1,17 @@
+{
+  "name": "forma",
+  "private": true,
+  "license": "CC0-1.0 OR 0BSD",
+  "type": "module",
+  "packageManager": "pnpm@11.9.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "forma": "node apps/cli/src/cli.mjs",
+    "toolchain": "pnpm --filter @forma/cli toolchain",
+    "explorer": "pnpm --filter @forma/explorer build && pnpm --filter @forma/explorer start",
+    "build": "pnpm --filter @forma/explorer build",
+    "typecheck": "pnpm --filter @forma/explorer typecheck"
+  }
+}

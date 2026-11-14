@@ -1,0 +1,9 @@
+.finding { border-left: 2px solid var(--blue-3); padding-left: 0.8rem; margin: 0 0 0.8rem; }
+.real { border-left-color: var(--red); }
+.mechanism { display: grid; grid-template-columns: 7.2rem 1fr; column-gap: 1rem; margin: 0.5rem 0; padding: 0.5rem 0.6rem; background: var(--red-1); }
+.mechanismCap { color: var(--red); }
+.finding .mechanism { grid-template-columns: 1fr; }
+.finding .mechanismCap { margin-bottom: 0.2rem; }
+@media (max-width: 64rem) {
+  .mechanism { grid-template-columns: 1fr; }
+}

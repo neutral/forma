@@ -1,0 +1,86 @@
+{
+  "name": "export-ticket-tlc/parts/export-ticket/journeys/no-late-creation/refusal-at-3.f678ee6d8285",
+  "kind": "refusal",
+  "expected": {
+    "outcome": "not enabled",
+    "step": 3
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\", \"r-a-retry\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 1800,
+    "megabytes": 8192
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "8d9558566338431abc81c88d9c0da8069554362a18bf3cf1cc4a3ce3852810ed"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "85c363bd8370993443859c077315e8fda45caf516bb739669e8d5e435c4694da"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/journeys/no-late-creation/schedule.md",
+        "sha256": "d928ce71d204fbd8084f80f2f58c29720409adba544fab021d02c382b77dfc82"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "b1594c9a4fca9e4880751feee7e45796796eef012b8c32e3d3eadb47f002ee61"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "3c253819d13126ca0a8c1bf5325b608f794334532091320cd9902bc0239a5c47"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/check",
+        "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9"
+      },
+      {
+        "entry": "export-ticket/actions/complete",
+        "pin": "65a9f50a3fa79df8d3e61828d85e92098cbe0df8cc81d2eca5eea3edc98ddc1d"
+      },
+      {
+        "entry": "export-ticket/actions/expire",
+        "pin": "c65d1c23ef540315d12823ff2bcdbbd353d53f0a845775a5ca8593bad7476a9f"
+      },
+      {
+        "entry": "export-ticket/journeys/no-late-creation",
+        "pin": "78780a3db4fdd6501a5050a7e9b974ee9affbb27a26f4ceddad04a71dcb4786b"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "not enabled"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1538,
+    "states": 3,
+    "depth": 3
+  },
+  "flags": [],
+  "cases": [],
+  "established": "2026-11-13T12:23:48.031Z",
+  "previous": null,
+  "digest": "750c6e70603aec8eccf9698262eeeba4a94d88fe8aacc2dd4fed58248839f0cd"
+}

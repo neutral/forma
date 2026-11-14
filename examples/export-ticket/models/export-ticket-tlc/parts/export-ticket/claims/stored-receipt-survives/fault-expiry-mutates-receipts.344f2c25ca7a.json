@@ -1,0 +1,89 @@
+{
+  "name": "export-ticket-tlc/parts/export-ticket/claims/stored-receipt-survives/fault-expiry-mutates-receipts.344f2c25ca7a",
+  "kind": "fault",
+  "expected": {
+    "outcome": "caught"
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 300,
+    "megabytes": 2048
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "4f09199d60faf474bbe8b61daa62c807c8c0fff29f32d4f9c804347ea121dc8d"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "795db785038e2b0b55dfedea6524cf84424fafee44d94726315b3efa19eadd0f"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/claims/stored-receipt-survives/encoding.tla",
+        "sha256": "c8940d7bc4f627fca900baf83ba581ef2cfedb00ca39b87a81bcb6cf8d34deb5"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/claims/stored-receipt-survives/fault-expiry-mutates-receipts.md",
+        "sha256": "22ebbace3d4e27444a5fdde82afbdd842ffb81472a231fa2668758f892207f31"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "7e52bd9d47a7a1e725af819d58845fe97007bb380641b67d0730b61c5e478ff0"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "fb68a8123ef2cb62a5fd4f0cc72f1f1c53c8e4138900b88ed6c308b5863b027a"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/check",
+        "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9"
+      },
+      {
+        "entry": "export-ticket/actions/complete",
+        "pin": "65a9f50a3fa79df8d3e61828d85e92098cbe0df8cc81d2eca5eea3edc98ddc1d"
+      },
+      {
+        "entry": "export-ticket/actions/expire",
+        "pin": "c65d1c23ef540315d12823ff2bcdbbd353d53f0a845775a5ca8593bad7476a9f"
+      },
+      {
+        "entry": "export-ticket/claims/stored-receipt-survives",
+        "pin": "28def71d400145817a2438d60a00dac175b60d74d859e57911ced62a59684b47"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "d84a4e03d3bb"
+    }
+  },
+  "found": {
+    "outcome": "violation",
+    "property": "Invariant"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 995,
+    "states": 237,
+    "depth": 4
+  },
+  "flags": [],
+  "established": "2026-11-12T03:52:30.400Z",
+  "previous": null,
+  "digest": "a94f4d870cb084c6b38c919350b21f6e43af39f7dead59e9de04f43c99140928"
+}

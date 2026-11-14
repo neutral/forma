@@ -1,0 +1,11 @@
+/* the document, the margin rule, and the notes that hang from it */
+.passage { display: grid; grid-template-columns: minmax(0, 40rem) minmax(0, 1fr); column-gap: 2.4rem; scroll-margin-top: 1rem; }
+.notes { position: relative; font-size: 11.5px; line-height: 1.5; border-left: 1px solid var(--blue-5); padding: 1.5rem 0 1rem 1.2rem; }
+/* a tick on the margin rule where the passage starts, as on a dimension line */
+.notes::before { content: ''; position: absolute; left: -6px; top: 1.95rem; width: 11px; border-top: 1px solid var(--blue-7); transform: rotate(-45deg); }
+.opened { grid-column: 1 / -1; }
+@media (max-width: 64rem) {
+  .passage { grid-template-columns: minmax(0, 1fr); }
+  .notes { padding: 0 0 0.8rem 0.9rem; margin: 0 0 0.6rem; }
+  .notes::before { display: none; }
+}

@@ -1,0 +1,110 @@
+{
+  "name": "stock-to-cash/spans/stock-and-orders/journeys/last-cartons/start.ddfdfd789339",
+  "kind": "start",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "path": "models/stock-to-cash/spans/stock-and-orders/journeys/last-cartons/schedule.md",
+        "sha256": "f128c3f5244150ad1b3ea0e53d855db676211b35654cac3b1daf564d1cb0ea26"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "ad7b02438a6d48a29f0a7a7dc8e5ded5e6adff8816a33ab3f4598139b0fa9f47"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "f07fd007582dfb6c1bdc6d72f9eb5b4148b66475aefba86e9896003b5d257af7"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "orders/lifecycles/order",
+        "pin": "402901e0f2391041097b56375aeead380ca8ff09736118b5cdf7d7af2b41f8fc"
+      },
+      {
+        "entry": "stock-and-orders/journeys/last-cartons",
+        "pin": "6ef8683c88228cc5e790dea7ea0cd1901b05ce7535ce69bf3f0bc0fb6f8de50b"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1594,
+    "states": null,
+    "depth": null
+  },
+  "flags": [],
+  "trace": {
+    "states": [
+      {
+        "phases": {
+          "accounts/invoice": {
+            "batch, first-order": "unissued",
+            "second-order": "unissued"
+          },
+          "orders/order": {
+            "batch, first-order": "unrecorded",
+            "second-order": "unrecorded"
+          },
+          "orders/shipment": {
+            "batch, first-order": "unprepared",
+            "second-order": "unprepared"
+          },
+          "stock/batch": {
+            "batch, first-order": "unrecorded",
+            "second-order": "unrecorded"
+          }
+        }
+      }
+    ]
+  },
+  "rendered": [],
+  "established": "2026-11-13T23:04:06.306Z",
+  "previous": null,
+  "digest": "51d1123fd114cc4f4c1e8cf283c460a0afaa488747bedfdde64cca18bc26806e"
+}

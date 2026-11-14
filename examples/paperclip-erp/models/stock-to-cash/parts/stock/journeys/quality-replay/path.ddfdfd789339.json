@@ -1,0 +1,98 @@
+{
+  "name": "stock-to-cash/parts/stock/journeys/quality-replay/path.ddfdfd789339",
+  "kind": "path",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "path": "models/stock-to-cash/parts/stock/journeys/quality-replay/schedule.md",
+        "sha256": "9cbbe325f274a2079e9090e10dbc9bb6706da3111e6c4144fbdb194414b85858"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "f71b07841cbc26e2088e29a20153fb2cf17ab7e1ba228054341c57f240ca740d"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "8a2f75367f3204d3e3238ad54137967923b98de4e008bfa41f0c9267e9f06484"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "stock/actions/hold-batch",
+        "pin": "8c7946c96bf86aa390b881622620704e8aedbe6860534b9c109b0b2240b890b3"
+      },
+      {
+        "entry": "stock/actions/receive-batch",
+        "pin": "75373cedf831cf406be1e23850082a1d63b50f6fefb39f67c052efa196c8fff4"
+      },
+      {
+        "entry": "stock/actions/release-batch",
+        "pin": "578cdb745b85ce1b14b7d2872c182c85796c769b17ea3f0a273e1b3f9310712a"
+      },
+      {
+        "entry": "stock/journeys/quality-replay",
+        "pin": "56b08d30f03b82b91fae1f1a27000a55ed504d27b362ae4d127be96d361fb657"
+      },
+      {
+        "entry": "stock/lifecycles/batch",
+        "pin": "4831e4b7971a4d5b8597c2c584476086af6153221a3ede61e80cd8fe2323b1a0"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1169,
+    "states": 71,
+    "depth": 7
+  },
+  "flags": [],
+  "cases": [],
+  "established": "2026-11-13T22:08:06.390Z",
+  "previous": null,
+  "digest": "eff0a8e96b54154ff4c6a74215e533bb47f471709ac097313e9e355cf595eade"
+}

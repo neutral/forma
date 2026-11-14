@@ -1,0 +1,84 @@
+{
+  "name": "export-ticket-tlc/world/export-ticket/recipient/go-silent.f678ee6d8285",
+  "kind": "misbehaviour",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\", \"r-a-retry\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 1800,
+    "megabytes": 8192
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "8d9558566338431abc81c88d9c0da8069554362a18bf3cf1cc4a3ce3852810ed"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "85c363bd8370993443859c077315e8fda45caf516bb739669e8d5e435c4694da"
+      },
+      {
+        "path": "models/export-ticket-tlc/world/export-ticket/recipient/go-silent.tla",
+        "sha256": "7c517c8c0a5ec2e4f8e4c2a21c4bf17b6ff61393ba7fd080a09db286c8a902a7"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "b4dc11417bbba733d035c3a2d234f59cce8dd2b052639baf1b82674e1d7d80f6"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "252089811d68decf85d14c61a0f3a37fa815051748e3ed06c4eb5135e0f804c4"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/check",
+        "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9"
+      },
+      {
+        "entry": "export-ticket/actions/complete",
+        "pin": "65a9f50a3fa79df8d3e61828d85e92098cbe0df8cc81d2eca5eea3edc98ddc1d"
+      },
+      {
+        "entry": "export-ticket/actions/return-receipt",
+        "pin": "1289eb21f419ab97dc2668baf53c30eae27a926665cd6f5e4c3d05cdef3b0a6a"
+      },
+      {
+        "entry": "export-ticket/boundary/recipient",
+        "pin": "1bc8bb0925adf07d9aa51749c0ed12112b418222e7dfc3db0dca07889021dd79"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 889,
+    "states": 4772,
+    "depth": 5
+  },
+  "flags": [],
+  "established": "2026-11-13T13:25:03.105Z",
+  "previous": null,
+  "digest": "660eb021fbc2aab8c77340444203242527d6452a0adeb635c60838d4a7356f31"
+}

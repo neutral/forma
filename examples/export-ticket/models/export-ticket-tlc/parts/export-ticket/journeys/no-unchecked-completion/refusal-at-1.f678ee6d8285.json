@@ -1,0 +1,78 @@
+{
+  "name": "export-ticket-tlc/parts/export-ticket/journeys/no-unchecked-completion/refusal-at-1.f678ee6d8285",
+  "kind": "refusal",
+  "expected": {
+    "outcome": "not enabled",
+    "step": 1
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\", \"r-a-retry\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 1800,
+    "megabytes": 8192
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "8d9558566338431abc81c88d9c0da8069554362a18bf3cf1cc4a3ce3852810ed"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "85c363bd8370993443859c077315e8fda45caf516bb739669e8d5e435c4694da"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/journeys/no-unchecked-completion/schedule.md",
+        "sha256": "1b294d6bf526cc809fe553df7e09eeac7195c9e0652c43c43908082eccb1c5f9"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "b1594c9a4fca9e4880751feee7e45796796eef012b8c32e3d3eadb47f002ee61"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "371c876fce86c6f4f1980a141c4ec34e2c01e8854eb7838e26416f70ec8556c9"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/complete",
+        "pin": "65a9f50a3fa79df8d3e61828d85e92098cbe0df8cc81d2eca5eea3edc98ddc1d"
+      },
+      {
+        "entry": "export-ticket/journeys/no-unchecked-completion",
+        "pin": "279f036e0ac156ed96ba99e19164ec84eb54bba4e8bcda93bac3db6be80c7901"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "not enabled"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1498,
+    "states": 1,
+    "depth": 1
+  },
+  "flags": [],
+  "cases": [],
+  "established": "2026-11-13T12:23:49.890Z",
+  "previous": null,
+  "digest": "b40e06983c331f4be40d948a6dbb205c974c7dcbb40067cefa8d5373b2ea57e0"
+}

@@ -1,0 +1,85 @@
+{
+  "name": "export-ticket-tlc/parts/export-ticket/claims/one-receipt/fault-unchecked-claim.344f2c25ca7a",
+  "kind": "fault",
+  "expected": {
+    "outcome": "caught"
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 300,
+    "megabytes": 2048
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "4f09199d60faf474bbe8b61daa62c807c8c0fff29f32d4f9c804347ea121dc8d"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "795db785038e2b0b55dfedea6524cf84424fafee44d94726315b3efa19eadd0f"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/claims/one-receipt/encoding.tla",
+        "sha256": "4ed5a8021326e0678e7b1bc944de73bde40eaa537f87197586533cae8ef17c3d"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/claims/one-receipt/fault-unchecked-claim.md",
+        "sha256": "be02b944e1bed9e11c88da4b6563f09333614691c7d08b752b5af9ad486b9a40"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "7e52bd9d47a7a1e725af819d58845fe97007bb380641b67d0730b61c5e478ff0"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "e06f0dc618cb441b0364a8ff0ab5376407cccbe5abecaebd81d9d0329cb46575"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/check",
+        "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9"
+      },
+      {
+        "entry": "export-ticket/actions/complete",
+        "pin": "65a9f50a3fa79df8d3e61828d85e92098cbe0df8cc81d2eca5eea3edc98ddc1d"
+      },
+      {
+        "entry": "export-ticket/claims/one-receipt",
+        "pin": "2259f509c1077d3a0124e8399dde1a246736b1f6c521c39f6dc46eaa0ccdf9fd"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "d84a4e03d3bb"
+    }
+  },
+  "found": {
+    "outcome": "violation",
+    "property": "Invariant"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1117,
+    "states": 754,
+    "depth": 5
+  },
+  "flags": [],
+  "established": "2026-11-12T03:52:17.816Z",
+  "previous": null,
+  "digest": "9dfc2a6702be87e9899b146e9fe2ba6855116668b24b991bd6521b1710fe7086"
+}

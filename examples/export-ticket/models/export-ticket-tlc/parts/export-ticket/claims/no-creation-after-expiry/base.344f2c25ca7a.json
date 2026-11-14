@@ -1,0 +1,72 @@
+{
+  "name": "export-ticket-tlc/parts/export-ticket/claims/no-creation-after-expiry/base.344f2c25ca7a",
+  "kind": "base",
+  "expected": {
+    "outcome": "no violation"
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 300,
+    "megabytes": 2048
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "4f09199d60faf474bbe8b61daa62c807c8c0fff29f32d4f9c804347ea121dc8d"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "795db785038e2b0b55dfedea6524cf84424fafee44d94726315b3efa19eadd0f"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/claims/no-creation-after-expiry/encoding.tla",
+        "sha256": "f0dc94f5841b7b8712b7c2b236c7140e110a690f442eb5604c0c4d0f5d008839"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "7e52bd9d47a7a1e725af819d58845fe97007bb380641b67d0730b61c5e478ff0"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "260a120f63ffdc8674dbe0f2c0c0ae1703db137c2f2266a0521d3b79730a7d1e"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/claims/no-creation-after-expiry",
+        "pin": "d16eb1efb779b0a6b7794d3e9da0d5e3805e9e34d4afdc9d2fbf0fa03bf163a6"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "d84a4e03d3bb"
+    }
+  },
+  "found": {
+    "outcome": "no violation"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 12122,
+    "states": 342649,
+    "depth": 20
+  },
+  "flags": [],
+  "established": "2026-11-12T03:52:28.818Z",
+  "previous": null,
+  "digest": "2aad915bf2a37ee9461455f1d8086aef4b9587ee7c7db50b34a3ab793fd06fbd"
+}

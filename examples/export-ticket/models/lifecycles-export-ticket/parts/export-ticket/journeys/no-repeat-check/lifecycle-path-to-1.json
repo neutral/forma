@@ -1,0 +1,106 @@
+{
+  "name": "lifecycles-export-ticket/parts/export-ticket/journeys/no-repeat-check/lifecycle-path-to-1",
+  "kind": "lifecycle-path",
+  "expected": {
+    "outcome": "admitted",
+    "step": 1
+  },
+  "bounds": "phase level",
+  "limits": {
+    "seconds": 60
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "design/parts/export-ticket/actions.md",
+        "sha256": "555db07e9f867d33bcbe0671f6b87968832145eaa8d37b2023e3ed1e553543ce"
+      },
+      {
+        "path": "design/parts/export-ticket/choices/fetch-after-expiry/README.md",
+        "sha256": "31c20d2bf5ef270cb438567552f8c5f95472950180473f3bbb06fde54e1ecf16"
+      },
+      {
+        "path": "design/parts/export-ticket/lifecycles/ticket-state/README.md",
+        "sha256": "160252198f0f45c66edb1650ba746c4f33fa259a29a2767219f44d5814a89de2"
+      },
+      {
+        "generated": "lifecycles.json",
+        "sha256": "aa30859e87bf3f294a3706b3d8dd982ce3d3f888b28aff65b9d81e8a0a60f3bd"
+      },
+      {
+        "generated": "question.json",
+        "sha256": "82faa254a8a6566a4aec4342aa4b6a64868cee3f3dd59f53e2c22a124a39b820"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/check",
+        "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9"
+      },
+      {
+        "entry": "export-ticket/actions/complete",
+        "pin": "65a9f50a3fa79df8d3e61828d85e92098cbe0df8cc81d2eca5eea3edc98ddc1d"
+      },
+      {
+        "entry": "export-ticket/actions/expire",
+        "pin": "c65d1c23ef540315d12823ff2bcdbbd353d53f0a845775a5ca8593bad7476a9f"
+      },
+      {
+        "entry": "export-ticket/actions/fetch-receipt",
+        "pin": "b92587f7815fb06ca66e72b813e9f62896eb435e315e71aba59b1de342c6a4bb"
+      },
+      {
+        "entry": "export-ticket/actions/request-retry",
+        "pin": "9138fee486659f25d81d6001b29e39d7eb6307aa7c9c9ac22c8af3a9f71b8597"
+      },
+      {
+        "entry": "export-ticket/actions/retry-claim",
+        "pin": "452e69b1c17c14a6647ef2de8abcca36f74d7f95d8baf93064b3565d0e4696a1"
+      },
+      {
+        "entry": "export-ticket/actions/return-receipt",
+        "pin": "1289eb21f419ab97dc2668baf53c30eae27a926665cd6f5e4c3d05cdef3b0a6a"
+      },
+      {
+        "entry": "export-ticket/actions/return-retry-receipt",
+        "pin": "2065fa7c32e17c74eae1a201e2b119df7afbecfda599709c1c6bf9ec2f843e35"
+      },
+      {
+        "entry": "export-ticket/journeys/no-repeat-check",
+        "pin": "08e5084378abbbb71e8f238848202359d42a18fc230a30d11d3e74fa711e7f8e"
+      },
+      {
+        "entry": "export-ticket/lifecycles/ticket-state",
+        "pin": "daf54ce69977c9d026e880d92004f77f09629c384820bf6f193476d3814574b9"
+      }
+    ],
+    "engine": {
+      "name": "lifecycle",
+      "version": "0.1.0"
+    },
+    "runtime": {
+      "name": "node",
+      "version": "24.22.1"
+    },
+    "library": {
+      "name": "xstate",
+      "version": "5.33.3"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "admitted"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 0,
+    "combinations": null
+  },
+  "flags": [],
+  "established": "2026-11-13T13:25:17.180Z",
+  "previous": null,
+  "digest": "91b06fbba2eda23afc3dbf7f630095335476f1860595a274dc25e1b523c22772"
+}

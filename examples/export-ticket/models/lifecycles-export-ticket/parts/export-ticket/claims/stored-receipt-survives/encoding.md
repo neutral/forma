@@ -1,0 +1,3 @@
+| Field | Value |
+| --- | --- |
+| Cannot express | The ticket-state lifecycle records only the ticket's expiry and claimed phase. It does not record the stored receipt's identity or existence, the prepared export's existence, or whether a reply was delivered, failed or lost. A claimed phase can stay unchanged while unrepresented receipt or export data is deleted or replaced, and a valid expiry changes active-claimed to expired-claimed while preserving that data. A phase combination or single forbidden transition therefore cannot express preservation of the same receipt, claim and export across expiry and reply loss. This requires durable data and reply outcomes in a TLC or Alloy model, independently of the permission to fetch later. |

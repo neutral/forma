@@ -1,0 +1,107 @@
+{
+  "name": "stock-to-cash/spans/stock-and-orders/journeys/last-cartons/refusal-at-6.ddfdfd789339",
+  "kind": "refusal",
+  "expected": {
+    "outcome": "not enabled",
+    "step": 6
+  },
+  "bounds": {
+    "choose SumOn": "-",
+    "constant Batches": "1..2",
+    "constant Cartons": "1..4",
+    "constant Customers": "1..2",
+    "constant Decisions": "1..4",
+    "constant Focuses": "0..6",
+    "constant Hazards": "1..8",
+    "constant LimitValues": "{2, 10}",
+    "constant MaxQuantity": "5",
+    "constant Orders": "1..2",
+    "constant Profiles": "1..5",
+    "constant Receipts": "1..3",
+    "constant Shipments": "1..2"
+  },
+  "limits": {
+    "seconds": 5400,
+    "megabytes": 10240
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/stock-to-cash/StockToCash.tla",
+        "sha256": "972abfbd75b974fec98610af6453fa5d168afb215c7ac94acaefbb89564b6d10"
+      },
+      {
+        "path": "models/stock-to-cash/model.md",
+        "sha256": "ddf8a88c76a08d6e2e6ae472357fb812426b722066272f3b96c1358ab0108e51"
+      },
+      {
+        "path": "models/stock-to-cash/spans/stock-and-orders/journeys/last-cartons/schedule.md",
+        "sha256": "f128c3f5244150ad1b3ea0e53d855db676211b35654cac3b1daf564d1cb0ea26"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "38caafaef4f3b0e685468720762a1d001d8d458d118cec87bbaba4e4f855915f"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "f3cd05c1a6bfd6404953ae31c7e8a03ec2e6db522b8cf8623c491abdf38b59a3"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "orders/actions/confirm-order",
+        "pin": "c38b3ad9186861f3e09ce1acfe918680eb6b439eef7a2fe1f041b91a7aeff621"
+      },
+      {
+        "entry": "orders/actions/record-order",
+        "pin": "8065850002ac92f3bcf3ff4b1265726373a64e69a464ae91673fd5fa77a47561"
+      },
+      {
+        "entry": "orders/lifecycles/order",
+        "pin": "402901e0f2391041097b56375aeead380ca8ff09736118b5cdf7d7af2b41f8fc"
+      },
+      {
+        "entry": "stock-and-orders/journeys/last-cartons",
+        "pin": "6ef8683c88228cc5e790dea7ea0cd1901b05ce7535ce69bf3f0bc0fb6f8de50b"
+      },
+      {
+        "entry": "stock/actions/receive-batch",
+        "pin": "75373cedf831cf406be1e23850082a1d63b50f6fefb39f67c052efa196c8fff4"
+      },
+      {
+        "entry": "stock/actions/release-batch",
+        "pin": "578cdb745b85ce1b14b7d2872c182c85796c769b17ea3f0a273e1b3f9310712a"
+      },
+      {
+        "entry": "stock/lifecycles/batch",
+        "pin": "4831e4b7971a4d5b8597c2c584476086af6153221a3ede61e80cd8fe2323b1a0"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "0bf90517465b"
+    }
+  },
+  "found": {
+    "outcome": "not enabled"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1631208,
+    "states": 1135326,
+    "depth": 24
+  },
+  "flags": [],
+  "cases": [],
+  "established": "2026-11-13T23:31:14.833Z",
+  "previous": null,
+  "digest": "d1272e1047e7c834e7f19d068dadac5efc7139456227840906c1615484f1a1d0"
+}

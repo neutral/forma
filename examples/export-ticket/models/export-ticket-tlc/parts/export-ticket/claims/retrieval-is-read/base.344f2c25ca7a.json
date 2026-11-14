@@ -1,0 +1,72 @@
+{
+  "name": "export-ticket-tlc/parts/export-ticket/claims/retrieval-is-read/base.344f2c25ca7a",
+  "kind": "base",
+  "expected": {
+    "outcome": "no violation"
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 300,
+    "megabytes": 2048
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "4f09199d60faf474bbe8b61daa62c807c8c0fff29f32d4f9c804347ea121dc8d"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "795db785038e2b0b55dfedea6524cf84424fafee44d94726315b3efa19eadd0f"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/claims/retrieval-is-read/encoding.tla",
+        "sha256": "586b432d0f20e8de9d53c66dfc3a9376eafbfd779c12a06b446bcb746f7ca8ba"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "9a56c849750c31abd895a8506da827b6cf6f17c06406baed6f7b8310bf353bbb"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "944ccd58de51fb20caa2987575c410dbf0839f60611a69c8174430817db90a34"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/claims/retrieval-is-read",
+        "pin": "f3916c4f88ec325966abb66ba11cb856771840513543e2914694da8248784986"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "d84a4e03d3bb"
+    }
+  },
+  "found": {
+    "outcome": "no violation"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 12542,
+    "states": 342649,
+    "depth": 20
+  },
+  "flags": [],
+  "established": "2026-11-12T03:52:29.238Z",
+  "previous": null,
+  "digest": "518348d500453b408ea05d87f04d56ac51c593c5b93d197b904781b83ba4f2e1"
+}

@@ -1,0 +1,12 @@
+Target ==
+  /\ (focus = 2)
+  /\ (hazard = 7)
+  /\ (env.stage = 2)
+  /\ (env.mode = 3)
+  /\ (~ENABLED (RecordOrderRequest(<<1,1,2>>)))
+  /\ (db.orderPhase[1] = "draft" /\ db.orderCustomer[1] = 1 /\ db.orderQty[1] = 2 /\ db.orderPhase[2] = "unrecorded" /\ db.confirmed = {})
+  /\ (env.last = NoCmd)
+  /\ (env.previous = NoCmd)
+  /\ (env.retry = NoCmd)
+  /\ (env.delayed = NoCmd)
+  /\ (env.samples = 0)

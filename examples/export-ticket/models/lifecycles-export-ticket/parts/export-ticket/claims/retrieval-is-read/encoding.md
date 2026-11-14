@@ -1,0 +1,3 @@
+| Field | Value |
+| --- | --- |
+| Cannot express | The ticket-state lifecycle has no stored receipt identities, fetched value, receipt-creation history or request-key completion state. Fetching the same receipt and a faulty fetch that replaces it, creates another receipt or completes another claim can leave the same claimed phase unchanged. The pick in force permits fetch-receipt in expired-claimed as well as the ordinary active-claimed fetch. Forbidding either fetch self-loop would reject a permitted read, while leaving it allowed cannot distinguish those data mutations. The whole claim needs before-and-after receipt data, the identity returned and completion history, none of which a forbidden phase combination or single transition can inspect. |

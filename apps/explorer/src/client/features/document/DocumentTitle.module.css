@@ -1,0 +1,6 @@
+.title { display: flex; align-items: center; gap: 0.6rem; margin-top: 2.4rem; font-size: 10.5px; color: var(--blue-7); }
+.title:first-of-type { margin-top: 1.6rem; }
+.number { display: grid; place-items: center; width: 1.5rem; height: 1.5rem; border: 1px solid var(--blue-7); border-radius: 50%; font-weight: 600; }
+.name { font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.path { color: var(--blue-5); }
+.title::after { content: ''; flex: 1; border-top: 1px solid var(--blue-7); margin-right: calc(-1 * var(--gutter)); }

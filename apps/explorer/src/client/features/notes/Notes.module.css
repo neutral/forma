@@ -1,0 +1,5 @@
+.note { display: grid; grid-template-columns: 5.2rem minmax(0, 1fr); column-gap: 0.7rem; margin: 0 0 0.55rem; }
+.cap { padding-top: 0.14rem; }
+.flag { color: var(--red); }
+.revision { display: grid; grid-template-columns: 1.7rem minmax(0, 1fr); margin: 0 0 0.45rem; }
+.revision > svg { margin: 0; }

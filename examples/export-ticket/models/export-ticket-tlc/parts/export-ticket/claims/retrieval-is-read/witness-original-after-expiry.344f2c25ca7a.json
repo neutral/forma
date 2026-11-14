@@ -1,0 +1,185 @@
+{
+  "name": "export-ticket-tlc/parts/export-ticket/claims/retrieval-is-read/witness-original-after-expiry.344f2c25ca7a",
+  "kind": "witness",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 300,
+    "megabytes": 2048
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "4f09199d60faf474bbe8b61daa62c807c8c0fff29f32d4f9c804347ea121dc8d"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "795db785038e2b0b55dfedea6524cf84424fafee44d94726315b3efa19eadd0f"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/claims/retrieval-is-read/witness-original-after-expiry.md",
+        "sha256": "0534df916845f1b8a12b4683a6f16fab627214d3ac7616431d30fe7ba811b9d5"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "931e2b1c72bb5c0b3bf1c1f324f94a690e8c1d2d5641817114c5823f314903ef"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "88a79048a86d6aa5807cab5244bc5fab4f269fa7cc77a8b736d3e293b81e36bb"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/check",
+        "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9"
+      },
+      {
+        "entry": "export-ticket/actions/complete",
+        "pin": "65a9f50a3fa79df8d3e61828d85e92098cbe0df8cc81d2eca5eea3edc98ddc1d"
+      },
+      {
+        "entry": "export-ticket/actions/expire",
+        "pin": "c65d1c23ef540315d12823ff2bcdbbd353d53f0a845775a5ca8593bad7476a9f"
+      },
+      {
+        "entry": "export-ticket/actions/fetch-receipt",
+        "pin": "b92587f7815fb06ca66e72b813e9f62896eb435e315e71aba59b1de342c6a4bb"
+      },
+      {
+        "entry": "export-ticket/claims/retrieval-is-read",
+        "pin": "f3916c4f88ec325966abb66ba11cb856771840513543e2914694da8248784986"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "d84a4e03d3bb"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1081,
+    "states": 976,
+    "depth": 5
+  },
+  "flags": [],
+  "trace": {
+    "states": [
+      {
+        "phases": {
+          "export-ticket/ticket-state": {
+            "\"t\"": "active-unclaimed"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "export-ticket/check",
+            "bindings": {
+              "t": "\"t\"",
+              "k": "\"a\""
+            }
+          }
+        ],
+        "phases": {
+          "export-ticket/ticket-state": {
+            "\"t\"": "active-unclaimed"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "export-ticket/complete",
+            "bindings": {
+              "t": "\"t\"",
+              "k": "\"a\"",
+              "r": "\"r-a\""
+            }
+          }
+        ],
+        "phases": {
+          "export-ticket/ticket-state": {
+            "\"t\"": "active-claimed"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "export-ticket/expire",
+            "bindings": {
+              "t": "\"t\""
+            }
+          }
+        ],
+        "phases": {
+          "export-ticket/ticket-state": {
+            "\"t\"": "expired-claimed"
+          }
+        }
+      },
+      {
+        "rows": [
+          {
+            "action": "export-ticket/fetch-receipt",
+            "bindings": {
+              "t": "\"t\"",
+              "r": "\"r-a\""
+            }
+          }
+        ],
+        "phases": {
+          "export-ticket/ticket-state": {
+            "\"t\"": "expired-claimed"
+          }
+        }
+      }
+    ]
+  },
+  "rendered": [
+    {
+      "entry": "export-ticket/actions/check",
+      "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9",
+      "content": "Actor: The export-ticket service that owns tickets, remembered checks and receipts (service, machine, -, -)\nSentence: The service checks an active ticket with no receipt and remembers that this request key passed without claiming the ticket or creating a receipt.\nCases: \nGuard: This request key has not previously been checked or completed for this ticket.\nCites: 63974e0ade6cd6f0572d2131ff59d8cbd7bb03bb4acc862f10d7d59fa91155f7"
+    },
+    {
+      "entry": "export-ticket/actions/complete",
+      "pin": "65a9f50a3fa79df8d3e61828d85e92098cbe0df8cc81d2eca5eea3edc98ddc1d",
+      "content": "Actor: The export-ticket service that owns tickets, remembered checks and receipts (service, machine, -, -)\nSentence: Using this request key's remembered passing check without rechecking the ticket's current expiry or claim phase or the presence of another receipt, the service creates a fresh receipt and marks the ticket claimed in one atomic store action while recording that the key has completed.\nCases: \nGuard: This request key has a remembered passing check for this ticket and has not already completed.\nCites: 63974e0ade6cd6f0572d2131ff59d8cbd7bb03bb4acc862f10d7d59fa91155f7, e6e7ce874d934a58362362f687db140e6c5ae5e76cced13b1e8c8bae75c68cf9"
+    },
+    {
+      "entry": "export-ticket/actions/expire",
+      "pin": "c65d1c23ef540315d12823ff2bcdbbd353d53f0a845775a5ca8593bad7476a9f",
+      "content": "Actor: The export-ticket service that owns tickets, remembered checks and receipts (service, machine, -, -)\nSentence: The explicit expiry event changes an active ticket to expired independently of pending checks or completed claims and preserves remembered checks, receipts and the export, with no transition back to active.\nCases: \nGuard: none\nCites: 63974e0ade6cd6f0572d2131ff59d8cbd7bb03bb4acc862f10d7d59fa91155f7, e6e7ce874d934a58362362f687db140e6c5ae5e76cced13b1e8c8bae75c68cf9"
+    },
+    {
+      "entry": "export-ticket/actions/fetch-receipt",
+      "pin": "b92587f7815fb06ca66e72b813e9f62896eb435e315e71aba59b1de342c6a4bb",
+      "content": "Actor: The export-ticket service that owns tickets, remembered checks and receipts (service, machine, -, -)\nSentence: The service reads an already-created receipt for the recipient without creating another receipt or completing a request key, with permission after expiry left to the fetch-after-expiry choice.\nCases: \nGuard: The receipt being fetched already exists for this ticket.\nCites: e3f8b2b2b6b3b3b25b531ce07cb121bd2e8fcbc5d84c678ef24d1f8b8e679362, f7d8a9760a442503ceec26558e189bbd910031c00fa943885049fb74d21539df"
+    }
+  ],
+  "established": "2026-11-12T03:52:31.306Z",
+  "previous": null,
+  "digest": "f010a867bad3c948978ed07231691238e16b38853cfe4270124753abf2ef7b17"
+}

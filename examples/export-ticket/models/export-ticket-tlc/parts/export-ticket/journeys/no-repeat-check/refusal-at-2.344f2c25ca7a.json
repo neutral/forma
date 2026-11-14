@@ -1,0 +1,78 @@
+{
+  "name": "export-ticket-tlc/parts/export-ticket/journeys/no-repeat-check/refusal-at-2.344f2c25ca7a",
+  "kind": "refusal",
+  "expected": {
+    "outcome": "not enabled",
+    "step": 2
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 300,
+    "megabytes": 2048
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "4f09199d60faf474bbe8b61daa62c807c8c0fff29f32d4f9c804347ea121dc8d"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "795db785038e2b0b55dfedea6524cf84424fafee44d94726315b3efa19eadd0f"
+      },
+      {
+        "path": "models/export-ticket-tlc/parts/export-ticket/journeys/no-repeat-check/schedule.md",
+        "sha256": "8cc03ba6dbca2266ab25a02bcceaea16280f40931f8d0c7120cc8140d87a3af1"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "42c22eac27879db7f85bbfb44affe27c1a2f70ca4b17245bc003c570686bf5b3"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "fcbc48f7244881f28c33f72f3c8a46ca0033a8f454cb20dda8526c240c3d2e9e"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/check",
+        "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9"
+      },
+      {
+        "entry": "export-ticket/journeys/no-repeat-check",
+        "pin": "08e5084378abbbb71e8f238848202359d42a18fc230a30d11d3e74fa711e7f8e"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "d84a4e03d3bb"
+    }
+  },
+  "found": {
+    "outcome": "not enabled"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1071,
+    "states": 2,
+    "depth": 2
+  },
+  "flags": [],
+  "cases": [],
+  "established": "2026-11-12T03:51:58.684Z",
+  "previous": null,
+  "digest": "5b921fa372134483ba3036852cbc5fad3c08cb28a54ae3351421eacbcd1063cf"
+}

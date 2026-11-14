@@ -1,0 +1,21 @@
+.tools { position: fixed; top: 0.7rem; right: 0.8rem; z-index: 5; }
+.open { all: unset; cursor: pointer; width: 1.7rem; height: 1.7rem; display: grid; place-items: center; border: 1px solid var(--blue-7); border-radius: 50%; color: var(--blue-7); background: var(--paper); font: 500 13px/1 var(--mono); }
+.open[data-hovered] { color: var(--paper); background: var(--blue-7); }
+.open[data-focus-visible] { outline: 2px solid var(--blue-7); outline-offset: 2px; }
+
+.backdrop { position: fixed; inset: 0; z-index: 10; display: grid; place-items: center; background: var(--veil); }
+.modal { max-width: 44rem; width: calc(100vw - 3rem); max-height: calc(100vh - 4rem); overflow: auto; background: var(--paper); border: 1px solid var(--blue-7); }
+.dialog { padding: 1.2rem 1.5rem 1.4rem; font-size: 12px; line-height: 1.6; outline: none; }
+.heading { font-size: 10px; line-height: 1.5; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue-7); border-top: 1px solid var(--blue-3); padding-top: 0.8rem; margin: 1rem 0 0.4rem; }
+.heading:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+.dialog ul { margin: 0; padding-left: 1.1rem; }
+.dialog dl { display: grid; grid-template-columns: 11rem 1fr; gap: 0.25rem 0.9rem; margin: 0; }
+.dialog dl.marks { grid-template-columns: 1.6rem 1fr; }
+.dialog dt { color: var(--blue-7); }
+.dialog dt.diff { color: var(--red); }
+.dialog dd { margin: 0; }
+.close { all: unset; cursor: pointer; float: right; color: var(--blue-5); font-size: 11px; text-decoration: underline; text-underline-offset: 2px; padding: 0 0.2rem; border-radius: 2px; }
+.close[data-hovered] { color: var(--blue-9); }
+.close[data-focus-visible] { outline: 2px solid var(--blue-7); outline-offset: 2px; }
+
+@media print { .tools { display: none; } }

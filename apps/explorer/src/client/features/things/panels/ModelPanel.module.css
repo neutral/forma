@@ -1,0 +1,3 @@
+.bounds { border-collapse: collapse; font-size: 11.5px; margin: 0.3rem 0; background: var(--paper); }
+.bounds th, .bounds td { border: 1px solid var(--blue-3); padding: 0.25rem 0.5rem; text-align: left; vertical-align: top; }
+.bounds th { white-space: nowrap; font-weight: 500; font-size: 0.94em; }

@@ -1,0 +1,84 @@
+{
+  "name": "export-ticket-tlc/world/export-ticket/recipient/duplicate.344f2c25ca7a",
+  "kind": "misbehaviour",
+  "expected": {
+    "outcome": "reached"
+  },
+  "bounds": {
+    "constant CopyClass": "2",
+    "constant Keys": "{\"a\", \"b\"}",
+    "constant ReceiptIds": "{\"r-a\", \"r-b\"}",
+    "constant Tickets": "{\"t\"}"
+  },
+  "limits": {
+    "seconds": 300,
+    "megabytes": 2048
+  },
+  "basis": {
+    "files": [
+      {
+        "path": "models/export-ticket-tlc/ExportTicket.tla",
+        "sha256": "4f09199d60faf474bbe8b61daa62c807c8c0fff29f32d4f9c804347ea121dc8d"
+      },
+      {
+        "path": "models/export-ticket-tlc/model.md",
+        "sha256": "795db785038e2b0b55dfedea6524cf84424fafee44d94726315b3efa19eadd0f"
+      },
+      {
+        "path": "models/export-ticket-tlc/world/export-ticket/recipient/duplicate.tla",
+        "sha256": "a8c629b2deb79600853d440049d5e8e92374a3e8c413453ba2a9253c7d350c20"
+      },
+      {
+        "generated": "FormaExam.cfg",
+        "sha256": "931e2b1c72bb5c0b3bf1c1f324f94a690e8c1d2d5641817114c5823f314903ef"
+      },
+      {
+        "generated": "FormaExam.tla",
+        "sha256": "88a256b7cb6c4bf86be0a1c0a884c5d8242b24c77bc74e02de58ffd52b7dd1b2"
+      }
+    ],
+    "entries": [
+      {
+        "entry": "export-ticket/actions/check",
+        "pin": "77d8af4c51d56bc082f05e67dda21af5894fbfb54089c3c9a453c168a066d7e9"
+      },
+      {
+        "entry": "export-ticket/actions/complete",
+        "pin": "65a9f50a3fa79df8d3e61828d85e92098cbe0df8cc81d2eca5eea3edc98ddc1d"
+      },
+      {
+        "entry": "export-ticket/actions/return-receipt",
+        "pin": "1289eb21f419ab97dc2668baf53c30eae27a926665cd6f5e4c3d05cdef3b0a6a"
+      },
+      {
+        "entry": "export-ticket/boundary/recipient",
+        "pin": "1bc8bb0925adf07d9aa51749c0ed12112b418222e7dfc3db0dca07889021dd79"
+      }
+    ],
+    "engine": {
+      "name": "tlc",
+      "version": "2.19 of 08 August 2024"
+    },
+    "runtime": {
+      "name": "java",
+      "version": "21.0.13+9"
+    },
+    "forma": {
+      "version": "0.1.0",
+      "source": "d84a4e03d3bb"
+    }
+  },
+  "found": {
+    "outcome": "reached"
+  },
+  "matches": true,
+  "measures": {
+    "duration": 1400,
+    "states": 955,
+    "depth": 5
+  },
+  "flags": [],
+  "established": "2026-11-12T03:52:13.485Z",
+  "previous": null,
+  "digest": "d55531dbd3d6ee3612ec1329946954aa9725f3b595e0a2406bb35004210c244e"
+}
