@@ -1,5 +1,7 @@
 # Forma
 
+> Forma has moved to [github.com/methodologies/forma](https://github.com/methodologies/forma), and its npm package to [`@methodologies/forma`](https://www.npmjs.com/package/@methodologies/forma). This repository is archived; it keeps Forma's history through 0.1.0.
+
 A software design makes claims: what the system must do, and what it must never
 do. Forma examines those claims at the design level, with formal methods, so the
 agents that write the code start from a stronger design. You write the design in
